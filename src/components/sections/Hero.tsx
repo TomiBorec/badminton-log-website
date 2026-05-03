@@ -7,7 +7,7 @@ import { WatchFrame } from '../devices/WatchFrame';
 import { PhoneLiveMatch } from '../screens/PhoneLiveMatch';
 import { WatchActiveMatch } from '../screens/WatchActiveMatch';
 
-const TESTFLIGHT_HREF = 'mailto:kalmus.tom@icloud.com?subject=TestFlight%20invite%20request';
+const TESTFLIGHT_HREF = '#waitlist';
 const ACCENT = 'system' as const;
 
 export function Hero() {

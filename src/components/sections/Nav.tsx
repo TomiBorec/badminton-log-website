@@ -1,7 +1,7 @@
 import { Shuttlecock } from '../Shuttlecock';
 import { ThemeToggle } from '../ThemeToggle';
 
-const TESTFLIGHT_HREF = 'mailto:kalmus.tom@icloud.com?subject=TestFlight%20invite%20request';
+const TESTFLIGHT_HREF = '/#waitlist';
 
 const linkStyle = {
   color: 'var(--muted)',
