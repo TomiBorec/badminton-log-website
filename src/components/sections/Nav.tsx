@@ -34,7 +34,7 @@ export function Nav() {
         }}
       >
         <a
-          href="#top"
+          href="/"
           style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', color: 'var(--fg)' }}
         >
           <Shuttlecock size={22} />
@@ -55,13 +55,13 @@ export function Nav() {
           </span>
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
-          <a href="#features" style={linkStyle} className="bb-nav-link">
+          <a href="/#features" style={linkStyle} className="bb-nav-link">
             Features
           </a>
-          <a href="#how" style={linkStyle} className="bb-nav-link">
+          <a href="/#how" style={linkStyle} className="bb-nav-link">
             How it works
           </a>
-          <a href="#rules" style={linkStyle} className="bb-nav-link">
+          <a href="/#rules" style={linkStyle} className="bb-nav-link">
             Rules
           </a>
           <ThemeToggle />

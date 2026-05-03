@@ -22,13 +22,16 @@ export function Footer() {
           <span>· Designed &amp; built by Tomáš Kalmus.</span>
         </div>
         <div style={{ display: 'flex', gap: 20 }}>
-          <a href="#" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
+          <a href="/privacy" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
             Privacy
           </a>
-          <a href="#" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
+          <a href="mailto:kalmus.tom@icloud.com" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
             Support
           </a>
-          <a href="#" style={{ color: 'var(--muted)', textDecoration: 'none' }}>
+          <a
+            href="https://github.com/TomiBorec/badminton-log"
+            style={{ color: 'var(--muted)', textDecoration: 'none' }}
+          >
             GitHub
           </a>
         </div>
