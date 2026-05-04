@@ -1,7 +1,7 @@
 import { Shuttlecock } from '../Shuttlecock';
 import { ThemeToggle } from '../ThemeToggle';
 
-const TESTFLIGHT_HREF = 'https://testflight.apple.com/join/6QfNavYx';
+const TESTFLIGHT_HREF = '/#waitlist';
 
 const linkStyle = {
   color: 'var(--muted)',

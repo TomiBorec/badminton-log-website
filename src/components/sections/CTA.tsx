@@ -54,7 +54,7 @@ export function CTA() {
       </a>
 
       <div style={{ marginTop: 28, fontSize: 12, color: 'var(--muted)', letterSpacing: 0.4 }}>
-        Requires iPhone with iOS 17+ and Apple Watch Series 6 or later.
+        Requires iPhone with iOS 26+ and Apple Watch with watchOS 26+.
       </div>
     </section>
   );

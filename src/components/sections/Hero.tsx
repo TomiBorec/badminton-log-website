@@ -7,7 +7,7 @@ import { WatchFrame } from '../devices/WatchFrame';
 import { PhoneLiveMatch } from '../screens/PhoneLiveMatch';
 import { WatchActiveMatch } from '../screens/WatchActiveMatch';
 
-const TESTFLIGHT_HREF = 'https://testflight.apple.com/join/6QfNavYx';
+const TESTFLIGHT_HREF = '#waitlist';
 const ACCENT = 'system' as const;
 
 export function Hero() {
@@ -132,7 +132,7 @@ export function Hero() {
         >
           <Stat label="Live sync" value="< 1s" />
           <Stat label="HealthKit" value="Native" />
-          <Stat label="watchOS" value="10+" />
+          <Stat label="watchOS" value="26+" />
         </div>
       </div>
 
