@@ -31,7 +31,7 @@ export function CTA() {
           marginBottom: 40,
         }}
       >
-        Join the TestFlight beta and be the first to try Badminton Log v3.
+        Join the TestFlight beta and be the first to try Badminton Log new features.
       </p>
 
       <a
