@@ -33,6 +33,7 @@ export function WatchActiveMatch({
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
+        justifyContent: 'center', /* <--- TOTO VYCENTRUJE OBSAH VERTIKÁLNĚ */
         padding: '14px 12px 10px',
         boxSizing: 'border-box',
         color: '#fff',
@@ -54,7 +55,8 @@ export function WatchActiveMatch({
         10:09
       </div>
 
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'baseline', gap: 6, marginTop: 8 }}>
+      {/* Trochu jsem zmenšil marginTop z 8 na 0, protože při centrování už není potřeba obsah tolik odpalovat seshora */}
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'baseline', gap: 6, marginTop: 0 }}>
         <span style={{ fontSize: 11, color: 'rgba(235,235,245,0.6)' }}>Games</span>
         <span style={{ fontSize: 15, fontWeight: 700, color: gamesColor, fontFeatureSettings: '"tnum"' }}>
           {match.playerGames}-{match.opponentGames}
@@ -98,6 +100,7 @@ export function WatchActiveMatch({
   );
 }
 
+// Zbytek tvého kódu (PulseScore a ScoreBtn) zůstává beze změny...
 function PulseScore({ value, color, pulse }: { value: number; color: string; pulse: boolean }) {
   const [scale, setScale] = useState(1);
   useEffect(() => {
