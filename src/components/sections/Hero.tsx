@@ -7,7 +7,7 @@ import { WatchFrame } from '../devices/WatchFrame';
 import { PhoneLiveMatch } from '../screens/PhoneLiveMatch';
 import { WatchActiveMatch } from '../screens/WatchActiveMatch';
 
-const TESTFLIGHT_HREF = '#waitlist';
+const APPSTORE_HREF = 'https://apps.apple.com/us/app/badminton-log/id6766060549';
 const ACCENT = 'system' as const;
 
 export function Hero() {
@@ -91,7 +91,9 @@ export function Hero() {
         </p>
         <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
           <a
-            href={TESTFLIGHT_HREF}
+            href={APPSTORE_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               background: 'var(--fg)',
               color: 'var(--bg)',
@@ -105,7 +107,7 @@ export function Hero() {
               gap: 8,
             }}
           >
-            Join TestFlight →
+            Download on App Store →
           </a>
           <a
             href="#features"

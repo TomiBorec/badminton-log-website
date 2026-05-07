@@ -1,7 +1,7 @@
 import { Shuttlecock } from '../Shuttlecock';
 import { ThemeToggle } from '../ThemeToggle';
 
-const TESTFLIGHT_HREF = '/#waitlist';
+const APPSTORE_HREF = 'https://apps.apple.com/us/app/badminton-log/id6766060549';
 
 const linkStyle = {
   color: 'var(--muted)',
@@ -66,7 +66,9 @@ export function Nav() {
           </a>
           <ThemeToggle />
           <a
-            href={TESTFLIGHT_HREF}
+            href={APPSTORE_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               background: 'var(--fg)',
               color: 'var(--bg)',
@@ -77,7 +79,7 @@ export function Nav() {
               textDecoration: 'none',
             }}
           >
-            Join TestFlight
+            Download on App Store
           </a>
         </div>
       </div>

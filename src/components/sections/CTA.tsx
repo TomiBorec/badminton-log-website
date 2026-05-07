@@ -25,13 +25,13 @@ export function CTA() {
           fontSize: 18,
           lineHeight: 1.5,
           color: 'var(--muted)',
-          maxWidth: 520,
+          maxWidth: 560,
           marginTop: 20,
           marginInline: 'auto',
           marginBottom: 40,
         }}
       >
-        Join the TestFlight beta and be the first to try Badminton Log new features.
+        Join the TestFlight beta to test new features before they ship and be the first to try what&apos;s next in Badminton Log.
       </p>
 
       <a
