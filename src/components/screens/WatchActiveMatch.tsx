@@ -63,8 +63,18 @@ export function WatchActiveMatch({
         </span>
       </div>
 
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'baseline', gap: 4, marginTop: 6 }}>
-        <PulseScore value={match.player} color={blue} pulse={match.pulse === 'p'} align="right" />
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr auto 1fr',
+          alignItems: 'baseline',
+          columnGap: 6,
+          marginTop: 6,
+        }}
+      >
+        <div style={{ justifySelf: 'end' }}>
+          <PulseScore value={match.player} color={blue} pulse={match.pulse === 'p'} />
+        </div>
         <span
           style={{
             fontSize: 38,
@@ -75,7 +85,9 @@ export function WatchActiveMatch({
         >
           :
         </span>
-        <PulseScore value={match.opponent} color={red} pulse={match.pulse === 'o'} align="left" />
+        <div style={{ justifySelf: 'start' }}>
+          <PulseScore value={match.opponent} color={red} pulse={match.pulse === 'o'} />
+        </div>
       </div>
 
       <div style={{ display: 'flex', gap: 10, marginTop: 8, justifyContent: 'center' }}>
@@ -101,17 +113,7 @@ export function WatchActiveMatch({
 }
 
 // Zbytek tvého kódu (PulseScore a ScoreBtn) zůstává beze změny...
-function PulseScore({
-  value,
-  color,
-  pulse,
-  align = 'center',
-}: {
-  value: number;
-  color: string;
-  pulse: boolean;
-  align?: 'left' | 'right' | 'center';
-}) {
+function PulseScore({ value, color, pulse }: { value: number; color: string; pulse: boolean }) {
   const [scale, setScale] = useState(1);
   useEffect(() => {
     if (pulse) {
@@ -130,10 +132,8 @@ function PulseScore({
         fontFeatureSettings: '"tnum"',
         transform: `scale(${scale})`,
         transition: 'transform 200ms cubic-bezier(0.34,1.56,0.64,1)',
-        transformOrigin: align === 'right' ? 'right center' : align === 'left' ? 'left center' : 'center',
+        transformOrigin: 'center',
         display: 'inline-block',
-        width: 70,
-        textAlign: align,
       }}
     >
       {value}

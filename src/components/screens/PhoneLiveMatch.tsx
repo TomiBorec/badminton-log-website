@@ -101,15 +101,17 @@ export function PhoneLiveMatch({
       <div
         style={{
           flex: 1,
-          display: 'flex',
+          display: 'grid',
+          gridTemplateColumns: '1fr auto 1fr',
           alignItems: 'center',
-          justifyContent: 'center',
-          gap: 12,
+          columnGap: 16,
           marginTop: -8,
           minWidth: 0,
         }}
       >
-        <BigPulse value={match.player} color={blue} pulse={match.pulse === 'p'} />
+        <div style={{ justifySelf: 'end' }}>
+          <BigPulse value={match.player} color={blue} pulse={match.pulse === 'p'} />
+        </div>
         <span
           style={{
             fontSize: 72,
@@ -121,7 +123,9 @@ export function PhoneLiveMatch({
         >
           :
         </span>
-        <BigPulse value={match.opponent} color={red} pulse={match.pulse === 'o'} />
+        <div style={{ justifySelf: 'start' }}>
+          <BigPulse value={match.opponent} color={red} pulse={match.pulse === 'o'} />
+        </div>
       </div>
 
       {/* Status message */}
