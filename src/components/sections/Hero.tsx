@@ -68,8 +68,8 @@ export function Hero() {
             fontWeight: 400,
           }}
         >
-          Badminton Log keeps score for you on Apple Watch — with heart rate, calories, and BWF rules built in.
-          Your iPhone mirrors every point in real time.
+          Badminton Log keeps score for you on Apple Watch — with heart rate, calories, and configurable rules.
+          Your iPhone mirrors every point in real time. Match history and your player roster sync to iPad via iCloud.
         </p>
         <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
           <a

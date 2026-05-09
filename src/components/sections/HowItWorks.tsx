@@ -9,12 +9,12 @@ const STEPS = [
   {
     n: '02',
     title: 'Tap to score',
-    body: 'P1 or P2 to add a point. Long press to undo. Your iPhone mirrors instantly.',
+    body: 'P1 or P2 to add a point. Long press to subtract. Your iPhone mirrors instantly.',
   },
   {
     n: '03',
     title: 'Match auto-saves',
-    body: 'Best of 5. When games hit 3, Badminton Log saves the full match — every game, every score.',
+    body: 'When the match ends, Badminton Log saves it — every game, every score. iCloud syncs to iPhone, iPad, and Apple Watch.',
   },
 ];
 

@@ -25,7 +25,7 @@ export function BWFRules() {
               marginBottom: 16,
             }}
           >
-            BWF rules built-in
+            Rules built in. Or your own.
           </div>
           <h2
             style={{
@@ -41,10 +41,22 @@ export function BWFRules() {
           </h2>
           <p style={{ fontSize: 17, lineHeight: 1.55, opacity: 0.65, marginTop: 20, marginBottom: 0 }}>
             Badminton Log enforces official BWF scoring — so you never have to argue whether 21–20 is game, or wonder what
-            happens at 29–all.
+            happens at 29–all. Or set your own: any point cap, any number of games, win-by-two on or off.
           </p>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+          <div
+            style={{
+              fontSize: 11,
+              fontWeight: 700,
+              letterSpacing: 1.4,
+              textTransform: 'uppercase',
+              opacity: 0.45,
+              marginBottom: 4,
+            }}
+          >
+            Classic BWF defaults — fully customizable
+          </div>
           <RuleCard num="21" label="Points to win a game" detail="First to 21 wins the game." />
           <RuleCard
             num="2"

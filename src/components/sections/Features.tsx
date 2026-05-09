@@ -1,16 +1,24 @@
 type IconKind = 'tap' | 'heart' | 'rules' | 'games' | 'mirror' | 'history';
 
 const ITEMS: { title: string; body: string; icon: IconKind }[] = [
-  { title: 'Tap to score', body: 'Two big buttons on your wrist. P1 to add, long-press to undo.', icon: 'tap' },
+  { title: 'Tap to score', body: 'Two big buttons on your wrist. P1 to add, long-press to subtract.', icon: 'tap' },
   { title: 'Heart rate live', body: 'HealthKit reads BPM and calories during every rally.', icon: 'heart' },
   {
-    title: 'BWF rules built in',
-    body: '21 points, 2-point lead, 30 cap. The watch knows when the game is won.',
+    title: 'Configurable rules',
+    body: 'Classic 21-point or fully custom: any cap, any number of games, win-by-two on or off — singles or doubles.',
     icon: 'rules',
   },
-  { title: 'Best of 5 games', body: 'Full match logic — game, set, match. Auto-saves on completion.', icon: 'games' },
+  {
+    title: 'Live Activities',
+    body: 'Score, games, and match status on your iPhone Lock Screen and Dynamic Island.',
+    icon: 'games',
+  },
   { title: 'iPhone mirror', body: 'A live scoreboard on your phone, perfect for the bench.', icon: 'mirror' },
-  { title: 'Match history', body: 'Every game, every score, every win. Synced both ways.', icon: 'history' },
+  {
+    title: 'iCloud history',
+    body: 'Matches and your player roster sync across iPhone, iPad, and Apple Watch — even after a fresh install.',
+    icon: 'history',
+  },
 ];
 
 export function Features() {
