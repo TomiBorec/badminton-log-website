@@ -90,7 +90,7 @@ export function WatchActiveMatch({
         </div>
       </div>
 
-      <div style={{ display: 'flex', gap: 10, marginTop: 8, justifyContent: 'center' }}>
+      <div style={{ display: 'flex', gap: 8, marginTop: 8 }}>
         <ScoreBtn label="P1" color={blue} />
         <ScoreBtn label="P2" color={red} />
       </div>
@@ -145,7 +145,7 @@ function ScoreBtn({ label, color }: { label: string; color: string }) {
   return (
     <div
       style={{
-        width: 84,
+        flex: 1,
         height: 38,
         borderRadius: 12,
         background: `color-mix(in srgb, ${color} 22%, transparent)`,
