@@ -3,18 +3,18 @@ import { SectionHeader } from './Features';
 const STEPS = [
   {
     n: '01',
-    title: 'Open on your wrist',
-    body: 'Tap "New Match". The watch starts a HealthKit workout in the background.',
+    title: 'Pick your sport',
+    body: 'Open Score Buddy on your wrist, pick a sport, tap "New Match". A HealthKit workout starts in the background.',
   },
   {
     n: '02',
     title: 'Tap to score',
-    body: 'P1 or P2 to add a point. Long press to subtract. Your iPhone mirrors instantly.',
+    body: 'Big buttons score every point — short tap to add, long-press to subtract. iPhone and iPad mirror instantly.',
   },
   {
     n: '03',
     title: 'Match auto-saves',
-    body: 'When the match ends, Badminton Log saves it — every game, every score. iCloud syncs to iPhone, iPad, and Apple Watch.',
+    body: 'When the match ends, Score Buddy saves it with full breakdown, BPM, and calories. iCloud syncs to every device.',
   },
 ];
 

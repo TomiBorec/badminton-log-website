@@ -12,8 +12,8 @@ export function HistoryShowcase() {
   return (
     <section style={{ maxWidth: 1200, margin: '0 auto', padding: '100px 32px 60px' }}>
       <SectionHeader
-        eyebrow="Match history"
-        title="Every match. Every game."
+        eyebrow="History + stats"
+        title="Every match. Every sport."
         subtitle="Saved automatically."
       />
       <div
@@ -39,12 +39,13 @@ export function HistoryShowcase() {
             Played in the morning, reviewed at lunch.
           </div>
           <p style={{ fontSize: 16, lineHeight: 1.55, color: 'var(--muted)', margin: 0 }}>
-            Your iPhone and iPad show the full archive — final score, every game&apos;s score, duration, average
-            heart rate, calories burned. iCloud keeps every device identical — even after a fresh install.
+            iPhone and iPad show the full archive across every sport — final score, every game or period, duration,
+            average heart rate, calories burned. Head-to-head record vs every opponent, win streaks, win rate by
+            format. iCloud keeps every device identical, even after a fresh install.
           </p>
           <div style={{ marginTop: 32, display: 'flex', flexDirection: 'column', gap: 10 }}>
-            <Bullet text="Full game-by-game breakdown" />
-            <Bullet text="HealthKit metrics per match" />
+            <Bullet text="Full breakdown per match — every sport" />
+            <Bullet text="HealthKit metrics + owner-perspective stats" />
             <Bullet text="iCloud sync across iPhone, iPad, Apple Watch" />
           </div>
         </div>

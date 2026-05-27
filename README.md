@@ -1,6 +1,8 @@
-# Badminton Log — Marketing site
+# Score Buddy — Marketing site
 
-Static marketing landing page for the **Badminton Log** iPhone + Apple Watch app.
+Static marketing landing page for **Score Buddy** (formerly Badminton Log) — the multi-sport score keeper for iPhone, iPad, and Apple Watch.
+
+The site URL — `badmintonlog.com` — is preserved while the brand transitions.
 
 Stack: Next.js 16 (App Router) · React 19 · TypeScript · Tailwind v4 · static export.
 

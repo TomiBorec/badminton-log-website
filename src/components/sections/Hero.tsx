@@ -7,7 +7,7 @@ import { WatchFrame } from '../devices/WatchFrame';
 import { PhoneLiveMatch } from '../screens/PhoneLiveMatch';
 import { WatchActiveMatch } from '../screens/WatchActiveMatch';
 
-const APPSTORE_HREF = 'https://apps.apple.com/us/app/badminton-log/id6766060549';
+const APPSTORE_HREF = 'https://apps.apple.com/app/id6766060549';
 const ACCENT = 'system' as const;
 
 export function Hero() {
@@ -30,6 +30,34 @@ export function Hero() {
       }}
     >
       <div>
+        <div
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 8,
+            padding: '6px 12px',
+            borderRadius: 999,
+            border: '1px solid var(--hairline)',
+            background: 'var(--bg-translucent)',
+            fontSize: 12,
+            fontWeight: 600,
+            letterSpacing: 0.4,
+            textTransform: 'uppercase',
+            color: 'var(--muted)',
+            marginBottom: 20,
+          }}
+        >
+          <span
+            style={{
+              display: 'inline-block',
+              width: 6,
+              height: 6,
+              borderRadius: 3,
+              background: '#34C759',
+            }}
+          />
+          Badminton Log is now Score Buddy
+        </div>
         <h1
           style={{
             fontSize: 'clamp(44px, 6vw, 88px)',
@@ -39,37 +67,39 @@ export function Hero() {
             margin: 0,
           }}
         >
-          Never forget
+          Score every game
           <br />
-          the score again.
+          from your wrist.
         </h1>
         <p
           style={{
             fontSize: 22,
             lineHeight: 1.4,
             color: 'var(--fg)',
-            maxWidth: 520,
+            maxWidth: 560,
             marginTop: 24,
             marginBottom: 12,
             fontWeight: 500,
             letterSpacing: -0.3,
           }}
         >
-          Score on your wrist. <span style={{ color: 'var(--muted)' }}>Watch on your phone.</span>
+          Badminton, tennis, basketball, football, golf.{' '}
+          <span style={{ color: 'var(--muted)' }}>One app. One tap.</span>
         </p>
         <p
           style={{
             fontSize: 17,
             lineHeight: 1.55,
             color: 'var(--muted)',
-            maxWidth: 520,
+            maxWidth: 560,
             marginTop: 0,
             marginBottom: 36,
             fontWeight: 400,
           }}
         >
-          Badminton Log keeps score for you on Apple Watch — with heart rate, calories, and configurable rules.
-          Your iPhone mirrors every point in real time. Match history and your player roster sync to iPad via iCloud.
+          Score Buddy keeps score for you on Apple Watch across five sports — with heart rate, calories, and
+          per-sport rules built in. iPhone and iPad mirror every point in real time. Match history, tournaments,
+          and your player roster sync across devices via iCloud.
         </p>
         <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
           <a
@@ -114,9 +144,9 @@ export function Hero() {
             fontWeight: 500,
           }}
         >
+          <Stat label="Sports" value="5" />
           <Stat label="Live sync" value="< 1s" />
           <Stat label="HealthKit" value="Native" />
-          <Stat label="watchOS" value="26+" />
         </div>
       </div>
 

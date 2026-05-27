@@ -31,7 +31,8 @@ export function CTA() {
           marginBottom: 40,
         }}
       >
-        Join the TestFlight beta to test new features before they ship and be the first to try what&apos;s next in Badminton Log.
+        Join the TestFlight beta to try new sports, new rules, and new bracket formats before they ship — and be
+        the first to see what&apos;s next in Score Buddy.
       </p>
 
       <a

@@ -1,22 +1,34 @@
 type IconKind = 'tap' | 'heart' | 'rules' | 'games' | 'mirror' | 'history';
 
 const ITEMS: { title: string; body: string; icon: IconKind }[] = [
-  { title: 'Tap to score', body: 'Two big buttons on your wrist. P1 to add, long-press to subtract.', icon: 'tap' },
-  { title: 'Heart rate live', body: 'HealthKit reads BPM and calories during every rally.', icon: 'heart' },
   {
-    title: 'Configurable rules',
-    body: 'Classic 21-point or fully custom: any cap, any number of games, win-by-two on or off — singles or doubles.',
+    title: 'Tap to score',
+    body: 'Big buttons on your wrist. Tap to add, long-press to subtract — every sport, same gesture.',
+    icon: 'tap',
+  },
+  {
+    title: 'Heart rate live',
+    body: 'A HealthKit workout runs in the background. BPM and calories logged for every match.',
+    icon: 'heart',
+  },
+  {
+    title: 'Per-sport rules',
+    body: 'Tennis tiebreaks, badminton win-by-two, basketball periods, football halves, golf hole counts — all editable.',
     icon: 'rules',
   },
   {
     title: 'Live Activities',
-    body: 'Score, games, and match status on your iPhone Lock Screen and Dynamic Island.',
+    body: 'Score, period clock, and game state on iPhone Lock Screen and Dynamic Island. Always glanceable.',
     icon: 'games',
   },
-  { title: 'iPhone mirror', body: 'A live scoreboard on your phone, perfect for the bench.', icon: 'mirror' },
   {
-    title: 'iCloud history',
-    body: 'Matches and your player roster sync across iPhone, iPad, and Apple Watch — even after a fresh install.',
+    title: 'Tournaments + roster',
+    body: 'Singles or doubles brackets with automatic seeding. Add your players once, reuse them everywhere.',
+    icon: 'mirror',
+  },
+  {
+    title: 'iCloud sync',
+    body: 'Match history, rules, roster, and stats sync across iPhone, iPad, and Apple Watch — no account needed.',
     icon: 'history',
   },
 ];

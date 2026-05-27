@@ -1,7 +1,7 @@
 import { Shuttlecock } from '../Shuttlecock';
 import { ThemeToggle } from '../ThemeToggle';
 
-const APPSTORE_HREF = 'https://apps.apple.com/us/app/badminton-log/id6766060549';
+const APPSTORE_HREF = 'https://apps.apple.com/app/id6766060549';
 
 const linkStyle = {
   color: 'var(--muted)',
@@ -38,10 +38,10 @@ export function Nav() {
           style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', color: 'var(--fg)' }}
         >
           <Shuttlecock size={22} />
-          <span style={{ fontWeight: 700, fontSize: 17, letterSpacing: -0.2 }}>Badminton Log</span>
+          <span style={{ fontWeight: 700, fontSize: 17, letterSpacing: -0.2 }}>Score Buddy</span>
           <span
             style={{
-              fontSize: 11,
+              fontSize: 10,
               fontWeight: 600,
               padding: '2px 6px',
               borderRadius: 4,
@@ -49,9 +49,10 @@ export function Nav() {
               color: 'var(--muted)',
               letterSpacing: 0.4,
               marginLeft: 4,
+              whiteSpace: 'nowrap',
             }}
           >
-            BL
+            Formerly Badminton Log
           </span>
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
@@ -61,8 +62,8 @@ export function Nav() {
           <a href="/#how" style={linkStyle} className="bb-nav-link">
             How it works
           </a>
-          <a href="/#rules" style={linkStyle} className="bb-nav-link">
-            Rules
+          <a href="/#sports" style={linkStyle} className="bb-nav-link">
+            Sports
           </a>
           <ThemeToggle />
           <a

@@ -20,16 +20,31 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Badminton Log — Never forget the score again',
+  title: 'Score Buddy — Score every game from your wrist',
   description:
-    'Badminton Log keeps score for you on Apple Watch — with heart rate, calories, and BWF rules built in. Your iPhone mirrors every point in real time.',
-  applicationName: 'Badminton Log',
+    'Score Buddy keeps score for you on Apple Watch across badminton, tennis, basketball, football, and golf — with heart rate, calories, and per-sport rules built in. iPhone and iPad mirror every point in real time. (Formerly Badminton Log.)',
+  applicationName: 'Score Buddy',
   authors: [{ name: 'Tomáš Kalmus' }],
-  keywords: ['badminton', 'apple watch', 'iphone', 'score', 'BWF', 'heart rate', 'healthkit'],
+  keywords: [
+    'score buddy',
+    'badminton log',
+    'badminton',
+    'tennis',
+    'basketball',
+    'football',
+    'golf',
+    'apple watch',
+    'iphone',
+    'ipad',
+    'score keeper',
+    'tournament',
+    'heart rate',
+    'healthkit',
+  ],
   openGraph: {
-    title: 'Badminton Log — Never forget the score again',
+    title: 'Score Buddy — Score every game from your wrist',
     description:
-      'Score on your wrist. Watch on your phone. Live BPM, calories, and BWF rules built in.',
+      'Badminton Log is now Score Buddy. Score on your wrist for badminton, tennis, basketball, football, and golf. Live BPM, calories, and per-sport rules built in.',
     type: 'website',
   },
   icons: {

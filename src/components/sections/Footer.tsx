@@ -18,8 +18,8 @@ export function Footer() {
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <Shuttlecock size={18} />
-          <span style={{ fontWeight: 600, color: 'var(--fg)' }}>Badminton Log</span>
-          <span>· Designed &amp; built by Tomáš Kalmus.</span>
+          <span style={{ fontWeight: 600, color: 'var(--fg)' }}>Score Buddy</span>
+          <span>· Formerly Badminton Log · Designed &amp; built by Tomáš Kalmus.</span>
         </div>
         <div style={{ display: 'flex', gap: 20 }}>
           <a href="/privacy" style={{ color: 'var(--muted)', textDecoration: 'none' }}>

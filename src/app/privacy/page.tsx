@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Badminton Log',
+  title: 'Privacy Policy — Score Buddy',
   description:
-    'Badminton Log stores your match data on your own device, in your private iCloud, and in Apple Health. The developer operates no server and cannot access your data.',
+    'Score Buddy stores your match data on your own device, in your private iCloud, and in Apple Health. The developer operates no server and cannot access your data.',
 };
 
 const sectionStyle = { marginTop: 40 } as const;
@@ -77,20 +77,21 @@ export default function PrivacyPage() {
       </header>
 
       <p style={{ ...pStyle, marginTop: 40, fontSize: 17 }}>
-        Badminton Log (&ldquo;the app&rdquo;) is committed to protecting your privacy. This policy describes
-        what information the app collects, how it is stored, and your rights.
+        Score Buddy (&ldquo;the app&rdquo;, formerly Badminton Log) is committed to protecting your privacy. This
+        policy describes what information the app collects, how it is stored, and your rights.
       </p>
 
       <section style={sectionStyle}>
         <h2 style={h2Style}>What we collect</h2>
         <p style={pStyle}>The app records the following data while you use it:</p>
         <ul style={ulStyle}>
-          <li>Match scores and game-by-game results</li>
+          <li>Match scores and game / period / hole results across all supported sports</li>
           <li>Match duration</li>
           <li>
             Heart rate and active calories burned during matches (from Apple Health, if you grant permission)
           </li>
-          <li>User-configured match rules and preferences</li>
+          <li>Your player roster (names you enter yourself) and tournament brackets</li>
+          <li>User-configured match rules and preferences per sport</li>
         </ul>
         <p style={pStyle}>The app does NOT collect:</p>
         <ul style={ulStyle}>
@@ -119,8 +120,14 @@ export default function PrivacyPage() {
       <section style={sectionStyle}>
         <h2 style={h2Style}>Third parties</h2>
         <p style={pStyle}>
-          Badminton Log uses no third-party SDKs, no analytics services, and no advertising networks. Your data
-          is not shared with anyone.
+          Score Buddy uses no third-party SDKs, no analytics services, and no advertising networks. Your data is
+          not shared with anyone.
+        </p>
+        <p style={pStyle}>
+          One narrow exception: when you actively search for a golf course inside the Golf setup screen, the app
+          queries a public golf-course database for course names and hole pars. The search query is sent over the
+          network for that one request only. No identifier, no match data, and no personal information is sent —
+          and nothing is sent at all unless you press search.
         </p>
       </section>
 
