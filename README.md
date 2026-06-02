@@ -1,6 +1,6 @@
-# Score Buddy — Marketing site
+# Scorius — Marketing site
 
-Static marketing landing page for **Score Buddy** (formerly Badminton Log) — the multi-sport score keeper for iPhone, iPad, and Apple Watch.
+Static marketing landing page for **Scorius** (formerly Badminton Log) — the multi-sport score keeper for iPhone, iPad, and Apple Watch.
 
 The site URL — `badmintonlog.com` — is preserved while the brand transitions.
 

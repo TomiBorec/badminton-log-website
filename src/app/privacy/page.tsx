@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Score Buddy',
+  title: 'Privacy Policy — Scorius',
   description:
-    'Score Buddy stores your match data on your own device, in your private iCloud, and in Apple Health. The developer operates no server and cannot access your data.',
+    'Scorius stores your match data on your own device, in your private iCloud, and in Apple Health. The developer operates no server and cannot access your data.',
 };
 
 const sectionStyle = { marginTop: 40 } as const;
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
       </header>
 
       <p style={{ ...pStyle, marginTop: 40, fontSize: 17 }}>
-        Score Buddy (&ldquo;the app&rdquo;, formerly Badminton Log) is committed to protecting your privacy. This
+        Scorius (&ldquo;the app&rdquo;, formerly Badminton Log) is committed to protecting your privacy. This
         policy describes what information the app collects, how it is stored, and your rights.
       </p>
 
@@ -120,7 +120,7 @@ export default function PrivacyPage() {
       <section style={sectionStyle}>
         <h2 style={h2Style}>Third parties</h2>
         <p style={pStyle}>
-          Score Buddy uses no third-party SDKs, no analytics services, and no advertising networks. Your data is
+          Scorius uses no third-party SDKs, no analytics services, and no advertising networks. Your data is
           not shared with anyone.
         </p>
         <p style={pStyle}>

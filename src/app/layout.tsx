@@ -20,13 +20,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Score Buddy — Score every game from your wrist',
+  title: 'Scorius — Score every game from your wrist',
   description:
-    'Score Buddy keeps score for you on Apple Watch across badminton, tennis, basketball, football, and golf — with heart rate, calories, and per-sport rules built in. iPhone and iPad mirror every point in real time. (Formerly Badminton Log.)',
-  applicationName: 'Score Buddy',
+    'Scorius keeps score for you on Apple Watch across badminton, tennis, basketball, football, and golf — with heart rate, calories, and per-sport rules built in. iPhone and iPad mirror every point in real time. (Formerly Badminton Log.)',
+  applicationName: 'Scorius',
   authors: [{ name: 'Tomáš Kalmus' }],
   keywords: [
-    'score buddy',
+    'scorius',
     'badminton log',
     'badminton',
     'tennis',
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     'healthkit',
   ],
   openGraph: {
-    title: 'Score Buddy — Score every game from your wrist',
+    title: 'Scorius — Score every game from your wrist',
     description:
-      'Badminton Log is now Score Buddy. Score on your wrist for badminton, tennis, basketball, football, and golf. Live BPM, calories, and per-sport rules built in.',
+      'Badminton Log is now Scorius. Score on your wrist for badminton, tennis, basketball, football, and golf. Live BPM, calories, and per-sport rules built in.',
     type: 'website',
   },
   icons: {

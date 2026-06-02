@@ -56,7 +56,7 @@ export function Hero() {
               background: '#34C759',
             }}
           />
-          Badminton Log is now Score Buddy
+          Badminton Log is now Scorius
         </div>
         <h1
           style={{
@@ -97,7 +97,7 @@ export function Hero() {
             fontWeight: 400,
           }}
         >
-          Score Buddy keeps score for you on Apple Watch across five sports — with heart rate, calories, and
+          Scorius keeps score for you on Apple Watch across five sports — with heart rate, calories, and
           per-sport rules built in. iPhone and iPad mirror every point in real time. Match history, tournaments,
           and your player roster sync across devices via iCloud.
         </p>

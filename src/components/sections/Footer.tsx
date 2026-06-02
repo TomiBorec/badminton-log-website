@@ -18,7 +18,7 @@ export function Footer() {
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <Shuttlecock size={18} />
-          <span style={{ fontWeight: 600, color: 'var(--fg)' }}>Score Buddy</span>
+          <span style={{ fontWeight: 600, color: 'var(--fg)' }}>Scorius</span>
           <span>· Formerly Badminton Log · Designed &amp; built by Tomáš Kalmus.</span>
         </div>
         <div style={{ display: 'flex', gap: 20 }}>

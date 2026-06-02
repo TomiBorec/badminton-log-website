@@ -38,7 +38,7 @@ export function Nav() {
           style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', color: 'var(--fg)' }}
         >
           <Shuttlecock size={22} />
-          <span style={{ fontWeight: 700, fontSize: 17, letterSpacing: -0.2 }}>Score Buddy</span>
+          <span style={{ fontWeight: 700, fontSize: 17, letterSpacing: -0.2 }}>Scorius</span>
           <span
             style={{
               fontSize: 10,

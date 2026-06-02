@@ -4,7 +4,7 @@ const STEPS = [
   {
     n: '01',
     title: 'Pick your sport',
-    body: 'Open Score Buddy on your wrist, pick a sport, tap "New Match". A HealthKit workout starts in the background.',
+    body: 'Open Scorius on your wrist, pick a sport, tap "New Match". A HealthKit workout starts in the background.',
   },
   {
     n: '02',
@@ -14,7 +14,7 @@ const STEPS = [
   {
     n: '03',
     title: 'Match auto-saves',
-    body: 'When the match ends, Score Buddy saves it with full breakdown, BPM, and calories. iCloud syncs to every device.',
+    body: 'When the match ends, Scorius saves it with full breakdown, BPM, and calories. iCloud syncs to every device.',
   },
 ];
 

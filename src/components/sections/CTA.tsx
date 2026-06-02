@@ -32,7 +32,7 @@ export function CTA() {
         }}
       >
         Join the TestFlight beta to try new sports, new rules, and new bracket formats before they ship — and be
-        the first to see what&apos;s next in Score Buddy.
+        the first to see what&apos;s next in Scorius.
       </p>
 
       <a

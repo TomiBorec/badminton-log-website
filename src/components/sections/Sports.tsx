@@ -80,7 +80,7 @@ export function Sports() {
             Whatever you&rsquo;re playing, the app calls game.
           </h2>
           <p style={{ fontSize: 17, lineHeight: 1.55, opacity: 0.65, marginTop: 20, marginBottom: 0 }}>
-            Score Buddy enforces the official rules for every sport it supports — so you never argue whether
+            Scorius enforces the official rules for every sport it supports — so you never argue whether
             21–20 is game, what a tennis tiebreak ends on, or what happens when the basketball clock hits zero.
             Or override anything: caps, periods, tiebreaks, hole counts — all editable per sport.
           </p>
