@@ -1,6 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0a0a0a"/>
-  <text x="32" y="33" text-anchor="middle" dominant-baseline="central"
-        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="46" font-weight="800" fill="#3ad06a">S</text>
+  <rect width="64" height="64" rx="14" fill="#ffffff"/>
+  <g fill="none" stroke="#0a0a0a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="32" cy="32" r="22"/>
+    <rect x="16.5" y="23.5" width="12" height="17" rx="6"/>
+    <rect x="35.5" y="23.5" width="12" height="17" rx="6"/>
+  </g>
+  <circle cx="32" cy="28.5" r="1.9" fill="#0a0a0a"/>
+  <circle cx="32" cy="35.5" r="1.9" fill="#0a0a0a"/>
 </svg>
