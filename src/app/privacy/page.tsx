@@ -1,176 +1,140 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import { SUPPORT_EMAIL } from '@/components/constants';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Scorius',
+  title: 'Privacy — Scorius',
   description:
-    'Scorius stores your match data on your own device, in your private iCloud, and in Apple Health. The developer operates no server and cannot access your data.',
-};
-
-const sectionStyle = { marginTop: 40 } as const;
-const h2Style = {
-  fontSize: 14,
-  fontWeight: 700,
-  letterSpacing: 1.6,
-  textTransform: 'uppercase' as const,
-  color: 'var(--muted)',
-  marginBottom: 16,
-  marginTop: 0,
-};
-const pStyle = {
-  fontSize: 16,
-  lineHeight: 1.65,
-  color: 'var(--fg)',
-  margin: '0 0 14px 0',
-};
-const ulStyle = {
-  margin: '0 0 14px 0',
-  paddingLeft: 22,
-  fontSize: 16,
-  lineHeight: 1.7,
-  color: 'var(--fg)',
+    'Scorius privacy policy. No accounts, no analytics, no third-party SDKs. Your data lives in your iCloud and Apple Health.',
 };
 
 export default function PrivacyPage() {
   return (
-    <article
-      style={{
-        maxWidth: 720,
-        margin: '0 auto',
-        padding: '80px 32px 120px',
-      }}
-    >
-      <header>
-        <div
-          style={{
-            fontSize: 12,
-            fontWeight: 700,
-            letterSpacing: 1.6,
-            textTransform: 'uppercase',
-            color: 'var(--muted)',
-            marginBottom: 14,
-          }}
-        >
-          Legal
-        </div>
-        <h1
-          style={{
-            fontSize: 'clamp(36px, 5vw, 56px)',
-            fontWeight: 700,
-            letterSpacing: -1.4,
-            lineHeight: 1.05,
-            margin: 0,
-          }}
-        >
-          Privacy Policy
-        </h1>
-        <p
-          style={{
-            marginTop: 16,
-            marginBottom: 0,
-            fontSize: 14,
-            color: 'var(--muted)',
-            fontFeatureSettings: '"tnum"',
-          }}
-        >
-          Last updated: 3 May 2026
+    <>
+      <header className="page-hero">
+        <span className="section-kicker">Privacy</span>
+        <h1>Your matches are yours.</h1>
+        <p className="lead">
+          Scorius is built so the developer never sees your data. No accounts, no analytics, no third-party SDKs — your
+          matches stay on your devices and in your iCloud.
         </p>
+        <p className="meta">Last updated · June 2026 · Applies to Scorius 2.0</p>
       </header>
 
-      <p style={{ ...pStyle, marginTop: 40, fontSize: 17 }}>
-        Scorius (&ldquo;the app&rdquo;, formerly Badminton Log) is committed to protecting your privacy. This
-        policy describes what information the app collects, how it is stored, and your rights.
-      </p>
+      <article className="article">
+        <div className="toc">
+          <h4>On this page</h4>
+          <ol>
+            <li>
+              <a href="#summary">The short version</a>
+            </li>
+            <li>
+              <a href="#stored">What Scorius stores — and where</a>
+            </li>
+            <li>
+              <a href="#network">Network &amp; third parties</a>
+            </li>
+            <li>
+              <a href="#health">Health data</a>
+            </li>
+            <li>
+              <a href="#control">Your control</a>
+            </li>
+            <li>
+              <a href="#children">Children</a>
+            </li>
+            <li>
+              <a href="#changes">Changes &amp; contact</a>
+            </li>
+          </ol>
+        </div>
 
-      <section style={sectionStyle}>
-        <h2 style={h2Style}>What we collect</h2>
-        <p style={pStyle}>The app records the following data while you use it:</p>
-        <ul style={ulStyle}>
-          <li>Match scores and game / period / hole results across all supported sports</li>
-          <li>Match duration</li>
+        <h2 id="summary">The short version</h2>
+        <p>
+          Scorius has <strong>no accounts, no analytics, no telemetry and no third-party SDKs</strong>. The app never
+          talks to any server other than Apple&apos;s — and one public golf-course database, only when you actively
+          search for a course. The developer cannot see your matches, your stats or anything else.
+        </p>
+
+        <h2 id="stored">What Scorius stores — and where</h2>
+        <p>
+          Everything Scorius keeps lives on your own devices and in your own iCloud. Nothing is uploaded to a server run
+          by the developer.
+        </p>
+        <ul>
           <li>
-            Heart rate and active calories burned during matches (from Apple Health, if you grant permission)
+            <strong>Match history, per-sport rules, player roster and settings</strong> are saved in your private iCloud
+            key-value store (<span className="mono">NSUbiquitousKeyValueStore</span>), with a local mirror on each device
+            for offline reads.
           </li>
-          <li>Your player roster (names you enter yourself) and tournament brackets</li>
-          <li>User-configured match rules and preferences per sport</li>
+          <li>
+            <strong>An in-progress match</strong> is stored only on the device scoring it — it is not synced.
+          </li>
+          <li>
+            <strong>Workouts (heart rate, active calories)</strong> are written to Apple Health, and only when you
+            explicitly grant access on Apple Watch.
+          </li>
         </ul>
-        <p style={pStyle}>The app does NOT collect:</p>
-        <ul style={ulStyle}>
-          <li>Name, email, or any personally identifying information</li>
-          <li>Location data</li>
-          <li>Device identifiers for tracking</li>
-          <li>Analytics or crash reports</li>
-          <li>Any data from outside the app</li>
-        </ul>
-      </section>
-
-      <section style={sectionStyle}>
-        <h2 style={h2Style}>Where your data is stored</h2>
-        <p style={pStyle}>All data is stored in three places, all owned by you:</p>
-        <ol style={ulStyle}>
-          <li>Locally on your device</li>
-          <li>In your private iCloud Key-Value Store, synced between your devices via your Apple ID</li>
-          <li>In your private Apple Health database (heart rate and workout records)</li>
-        </ol>
-        <p style={pStyle}>
-          The developer does not operate any server. There is no database, no logs, and no way for the developer
-          to access your data. Apple&rsquo;s iCloud and HealthKit services handle all storage and synchronization.
-        </p>
-      </section>
-
-      <section style={sectionStyle}>
-        <h2 style={h2Style}>Third parties</h2>
-        <p style={pStyle}>
-          Scorius uses no third-party SDKs, no analytics services, and no advertising networks. Your data is
-          not shared with anyone.
-        </p>
-        <p style={pStyle}>
-          One narrow exception: when you actively search for a golf course inside the Golf setup screen, the app
-          queries a public golf-course database for course names and hole pars. The search query is sent over the
-          network for that one request only. No identifier, no match data, and no personal information is sent —
-          and nothing is sent at all unless you press search.
-        </p>
-      </section>
-
-      <section style={sectionStyle}>
-        <h2 style={h2Style}>Your rights</h2>
-        <p style={pStyle}>You can at any time:</p>
-        <ul style={ulStyle}>
-          <li>Delete the app to remove local data</li>
-          <li>Disable iCloud sync via iOS Settings → [your name] → iCloud</li>
-          <li>Revoke Apple Health access via the Health app → Sharing → Apps</li>
-          <li>Manage your iCloud Key-Value Storage via your Apple ID account</li>
-        </ul>
-        <p style={pStyle}>
-          Because the app does not transmit data to the developer, the developer cannot delete data on your
-          behalf. Removing the app and signing out of iCloud removes all data the developer could ever reach.
-        </p>
-      </section>
-
-      <section style={sectionStyle}>
-        <h2 style={h2Style}>Children</h2>
-        <p style={pStyle}>The app does not knowingly collect any data from children under 13.</p>
-      </section>
-
-      <section style={sectionStyle}>
-        <h2 style={h2Style}>Changes to this policy</h2>
-        <p style={pStyle}>
-          This policy may be updated when the app gains new features. The updated policy will be available at
-          this URL.
-        </p>
-      </section>
-
-      <section style={sectionStyle}>
-        <h2 style={h2Style}>Contact</h2>
-        <p style={pStyle}>
-          Questions?{' '}
-          <a
-            href="mailto:kalmus.tom@icloud.com"
-            style={{ color: 'var(--fg)', textDecoration: 'underline', textUnderlineOffset: 3 }}
-          >
-            kalmus.tom@icloud.com
+        <p>
+          Because sync uses your personal iCloud, it is covered by{' '}
+          <a className="inline" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">
+            Apple&apos;s privacy policy
           </a>
+          . The developer has no access to it.
         </p>
-      </section>
-    </article>
+
+        <h2 id="network">Network &amp; third parties</h2>
+        <p>
+          Scorius makes exactly one kind of optional outbound request: when you <strong>search for a golf course</strong>,
+          the app queries a public golf-course database to fetch course and par information. No personal data is attached
+          to that request beyond your search text. If you never search for a course, Scorius makes no third-party network
+          calls at all.
+        </p>
+        <p>There are no advertising SDKs, no crash-reporting services and no usage analytics of any kind.</p>
+
+        <h2 id="health">Health data</h2>
+        <p>
+          If you start a match from Apple Watch, Scorius can run a workout to record <strong>heart rate</strong> and{' '}
+          <strong>active calories</strong>. This data is written to Apple Health on your device and is governed by your
+          Health permissions. You can revoke access at any time in <em>Settings → Health → Data Access &amp; Devices</em>.
+          Scorius never transmits Health data anywhere.
+        </p>
+
+        <h2 id="control">Your control</h2>
+        <ul>
+          <li>
+            <strong>Export &amp; import:</strong> you can export your full match history as JSON or CSV from inside the
+            app, and import it back.
+          </li>
+          <li>
+            <strong>Delete:</strong> deleting a match removes it from history and from iCloud sync. Removing the app and
+            clearing its iCloud data deletes everything.
+          </li>
+          <li>
+            <strong>Health:</strong> grant or revoke heart-rate and calorie access whenever you like.
+          </li>
+        </ul>
+
+        <h2 id="children">Children</h2>
+        <p>
+          Scorius does not collect any personal information from anyone, including children. It is safe to use at any age,
+          and it requires no account or profile.
+        </p>
+
+        <h2 id="changes">Changes &amp; contact</h2>
+        <p>
+          If this policy ever changes, the updated version will appear here with a new date. Questions about privacy?
+          Email{' '}
+          <a className="inline" href={`mailto:${SUPPORT_EMAIL}`}>
+            {SUPPORT_EMAIL}
+          </a>
+          , use <strong>Settings → Give Feedback</strong> inside the app, or reach out from the{' '}
+          <Link className="inline" href="/support#contact">
+            Support page
+          </Link>
+          .
+        </p>
+      </article>
+    </>
   );
 }

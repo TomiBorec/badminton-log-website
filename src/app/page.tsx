@@ -1,19 +1,20 @@
 import { Hero } from '@/components/sections/Hero';
+import { SwitchStrip } from '@/components/sections/SwitchStrip';
 import { Features } from '@/components/sections/Features';
 import { HowItWorks } from '@/components/sections/HowItWorks';
-import { Sports } from '@/components/sections/Sports';
-import { HistoryShowcase } from '@/components/sections/HistoryShowcase';
+import { PrivacyBand } from '@/components/sections/PrivacyBand';
 import { CTA } from '@/components/sections/CTA';
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <SwitchStrip />
       <Features />
+      <hr className="divider" />
       <HowItWorks />
-      <Sports />
-      <HistoryShowcase />
-      <CTA />
+      <PrivacyBand />
+      <CTA title="Ready to play?" subtitle="Start tracking your next match in three taps." />
     </>
   );
 }

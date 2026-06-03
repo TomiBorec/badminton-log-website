@@ -1,62 +1,24 @@
-const TESTFLIGHT_HREF = 'https://testflight.apple.com/join/6QfNavYx';
+import { APPSTORE_URL } from '@/components/constants';
+import { AppleGlyph } from '@/components/icons';
+import { Reveal } from '@/components/Reveal';
 
-export function CTA() {
+export function CTA({ title, subtitle }: { title: string; subtitle: string }) {
   return (
-    <section
-      id="waitlist"
-      style={{ maxWidth: 1200, margin: '0 auto', padding: '120px 32px 80px', textAlign: 'center' }}
-    >
-      <h2
-        style={{
-          fontSize: 'clamp(40px, 5.5vw, 80px)',
-          fontWeight: 700,
-          letterSpacing: -2,
-          lineHeight: 0.98,
-          margin: 0,
-          textWrap: 'balance',
-          maxWidth: 800,
-          marginInline: 'auto',
-        }}
-      >
-        Be there when new features ship.
-      </h2>
-      <p
-        style={{
-          fontSize: 18,
-          lineHeight: 1.5,
-          color: 'var(--muted)',
-          maxWidth: 560,
-          marginTop: 20,
-          marginInline: 'auto',
-          marginBottom: 40,
-        }}
-      >
-        Join the TestFlight beta to try new sports, new rules, and new bracket formats before they ship — and be
-        the first to see what&apos;s next in Scorius.
-      </p>
-
-      <a
-        href={TESTFLIGHT_HREF}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          display: 'inline-block',
-          background: 'var(--fg)',
-          color: 'var(--bg)',
-          borderRadius: 999,
-          padding: '14px 32px',
-          fontSize: 16,
-          fontWeight: 600,
-          textDecoration: 'none',
-          fontFamily: 'inherit',
-        }}
-      >
-        Join TestFlight →
-      </a>
-
-      <div style={{ marginTop: 28, fontSize: 12, color: 'var(--muted)', letterSpacing: 0.4 }}>
-        Requires iPhone with iOS 26+ and Apple Watch with watchOS 26+.
-      </div>
+    <section className="cta">
+      <Reveal as="span" className="section-kicker">
+        Free · iPhone, iPad &amp; Apple Watch
+      </Reveal>
+      <Reveal as="h2">{title}</Reveal>
+      <Reveal as="p">{subtitle}</Reveal>
+      <Reveal className="badges">
+        <a className="app-store-badge" href={APPSTORE_URL} target="_blank" rel="noopener noreferrer">
+          <AppleGlyph />
+          <span className="t">
+            <small>Download on the</small>
+            <b>App Store</b>
+          </span>
+        </a>
+      </Reveal>
     </section>
   );
 }
