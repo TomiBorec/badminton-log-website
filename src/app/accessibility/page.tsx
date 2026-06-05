@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 };
 
 const DEVICES = [
-  { name: 'iPhone', note: 'Requires iOS 17 or later' },
-  { name: 'iPad', note: 'Requires iPadOS 17 or later' },
-  { name: 'Apple Watch', note: 'Requires watchOS 10 or later' },
+  { name: 'iPhone', note: 'Requires iOS 26 or later' },
+  { name: 'iPad', note: 'Requires iPadOS 26 or later' },
+  { name: 'Apple Watch', note: 'Requires watchOS 26 or later' },
 ];
 
 const SUPPORTED = ['VoiceOver', 'Dark Interface', 'Differentiate Without Color Alone'];
@@ -31,8 +31,9 @@ export default function AccessibilityPage() {
           by everyone.
         </Reveal>
         <Reveal as="p" className="lead">
-          Scorius supports Apple&apos;s built-in accessibility features across iPhone, iPad and Apple&nbsp;Watch — so
-          keeping score works the way you need it to.
+          We want Scorius open to as many people as possible. It supports Apple&apos;s built-in accessibility features
+          across iPhone, iPad and Apple&nbsp;Watch — and because accessibility is never finished, we welcome every idea
+          on how to make it better.
         </Reveal>
       </header>
 
@@ -100,10 +101,10 @@ export default function AccessibilityPage() {
       <div className="contact-band">
         <div className="contact-card">
           <div>
-            <h3>Hit an accessibility barrier?</h3>
+            <h3>Hit a barrier, or have an idea?</h3>
             <p>
-              Tell us and we&apos;ll fix it — email <strong>{SUPPORT_EMAIL}</strong> or use{' '}
-              <strong>Settings → Give Feedback</strong> inside the app.
+              We read every suggestion and we&apos;re always glad to make Scorius work for more people — email{' '}
+              <strong>{SUPPORT_EMAIL}</strong> or use <strong>Settings → Give Feedback</strong> inside the app.
             </p>
           </div>
           <div className="hero-cta" style={{ margin: 0 }}>

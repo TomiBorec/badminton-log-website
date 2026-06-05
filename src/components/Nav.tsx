@@ -26,6 +26,9 @@ export function Nav() {
           <Link className={`nav-link${active('/privacy')}`} href="/privacy">
             Privacy
           </Link>
+          <Link className={`nav-link${active('/accessibility')}`} href="/accessibility">
+            Accessibility
+          </Link>
         </div>
         <div className="nav-spacer" />
         <div className="nav-actions">

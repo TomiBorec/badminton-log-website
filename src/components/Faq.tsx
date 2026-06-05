@@ -27,8 +27,8 @@ const ITEMS: { q: string; a: ReactNode }[] = [
     q: 'Which devices are supported?',
     a: (
       <>
-        iPhone and iPad on iOS 17 or later, and Apple Watch on watchOS 10 or later. The Watch app is optional — you can
-        score entirely from your phone if you prefer.
+        iPhone and iPad on iOS / iPadOS 26 or later, and Apple Watch on watchOS 26 or later. The Watch app is optional —
+        you can score entirely from your phone if you prefer.
       </>
     ),
   },

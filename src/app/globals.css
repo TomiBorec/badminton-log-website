@@ -623,6 +623,16 @@ img, svg { display: block; }
 .a11y-list li { display: flex; gap: 11px; align-items: flex-start; font-size: 15px; color: var(--fg-2); }
 .a11y-list svg { width: 18px; height: 18px; color: var(--accent); flex: none; margin-top: 1px; }
 
+/* ---- Accessibility note (landing) ---- */
+.a11y-note { max-width: 760px; margin: 0 auto; padding: 80px 28px; text-align: center; }
+.a11y-note h2 { font-size: clamp(30px, 4vw, 46px); font-weight: 800; letter-spacing: -.03em; line-height: 1.05; margin: 14px 0 0; }
+.a11y-note p { font-size: 18px; color: var(--muted); line-height: 1.6; margin: 18px auto 0; max-width: 640px; }
+.a11y-pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 26px; }
+.a11y-pill { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; background: var(--pill); border: 1px solid var(--hairline-2); font-size: 13.5px; font-weight: 600; color: var(--fg-2); }
+.a11y-pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.a11y-note .btn { margin-top: 28px; }
+@media (max-width: 520px) { .a11y-note { padding-inline: 18px; } }
+
 /* ---- Content responsive ---- */
 @media (max-width: 860px) {
   .fblock { grid-template-columns: 1fr; gap: 28px; padding: 44px 28px; }
