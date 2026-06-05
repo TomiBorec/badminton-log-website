@@ -16,6 +16,7 @@ export function Footer() {
           <h4>Product</h4>
           <Link href="/features">Features</Link>
           <Link href="/#sports">Sports</Link>
+          <Link href="/accessibility">Accessibility</Link>
           <a href={APPSTORE_URL} target="_blank" rel="noopener noreferrer">
             App Store
           </a>

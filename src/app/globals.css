@@ -618,6 +618,11 @@ img, svg { display: block; }
 .contact-card h3 { margin: 0 0 6px; font-size: 21px; font-weight: 700; letter-spacing: -.02em; }
 .contact-card p { margin: 0; color: var(--muted); font-size: 15px; }
 
+/* ---- Accessibility page : supported-feature list inside cards ---- */
+.a11y-list { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.a11y-list li { display: flex; gap: 11px; align-items: flex-start; font-size: 15px; color: var(--fg-2); }
+.a11y-list svg { width: 18px; height: 18px; color: var(--accent); flex: none; margin-top: 1px; }
+
 /* ---- Content responsive ---- */
 @media (max-width: 860px) {
   .fblock { grid-template-columns: 1fr; gap: 28px; padding: 44px 28px; }

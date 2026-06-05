@@ -78,3 +78,47 @@ export function CheckIcon() {
     </svg>
   );
 }
+
+/** Apple-style accessibility figure in a ring. */
+export function A11yIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <circle cx="12" cy="12" r="9.5" />
+      <circle cx="12" cy="7.3" r="1.35" fill="currentColor" stroke="none" />
+      <path d="M6 9.7c1.9.8 3.9 1.2 6 1.2s4.1-.4 6-1.2" />
+      <path d="M12 10.9v3.3M12 14.2l-2.1 3.9M12 14.2l2.1 3.9" />
+    </svg>
+  );
+}
+
+/** VoiceOver — figure with sound waves. */
+export function VoiceOverIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <circle cx="8.5" cy="12" r="3.2" />
+      <path d="M14 8.5a5 5 0 0 1 0 7M16.7 6a8.5 8.5 0 0 1 0 12" />
+    </svg>
+  );
+}
+
+/** Dark interface — half-filled contrast circle. */
+export function DarkInterfaceIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" aria-hidden>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+/** Differentiate without colour — distinct shapes. */
+export function DifferentiateIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M4 4.5l3.5 3.5M7.5 4.5 4 8" />
+      <path d="M16.5 4l3 5.2h-6z" />
+      <circle cx="5.75" cy="17" r="2.75" />
+      <rect x="14" y="14.25" width="5.5" height="5.5" rx="1" />
+    </svg>
+  );
+}

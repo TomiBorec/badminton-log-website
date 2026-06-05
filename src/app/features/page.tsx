@@ -250,7 +250,13 @@ export default function FeaturesPage() {
               </svg>
             </div>
             <h3>Accessible to everyone</h3>
-            <p>Full VoiceOver, Switch Control and hardware-keyboard support. Dynamic Type is respected throughout the app.</p>
+            <p>
+              VoiceOver, a full dark interface and Differentiate Without Color — Scorius supports Apple&apos;s
+              accessibility features on iPhone, iPad and Apple&nbsp;Watch.{' '}
+              <Link href="/accessibility" style={{ color: 'var(--accent)', fontWeight: 600 }}>
+                See what we support →
+              </Link>
+            </p>
           </Reveal>
         </div>
       </section>
