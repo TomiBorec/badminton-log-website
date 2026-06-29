@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import type { Sport } from '@/components/state';
+import { useI18n, type Dict } from '@/i18n';
 
 /* ============================================================
    Live-match engine — a per-sport state machine.
@@ -171,27 +172,28 @@ function ptsDisplay(cfg: SportCfg, p: number, o: number): string {
   return '40';
 }
 
-function computeVm(st: EngineState, cfg: SportCfg, sport: Sport): MatchVM {
+function computeVm(st: EngineState, cfg: SportCfg, sport: Sport, t: Dict): MatchVM {
+  const d = t.devices;
   const base = {
     sport,
-    name: cfg.name,
-    mode: cfg.mode,
+    name: t.sports[sport],
+    mode: d.modes[sport],
     nameA: cfg.a,
     nameB: cfg.b,
-    gamesLabel: cfg.gamesLabel,
+    gamesLabel: d.gamesLabels[sport],
     flashA: st.flash === 'a',
     flashB: st.flash === 'b',
   };
 
   if (cfg.golf) {
-    const t = golfTotals(st);
+    const tot = golfTotals(st);
     const golf: GolfVM = {
       hole: st.hole,
       holes: st.holes,
       par: st.par,
       strokes: st.strokes,
-      total: t.total,
-      toParLabel: toPar(t.topar),
+      total: tot.total,
+      toParLabel: toPar(tot.topar),
       thru: `${st.hole}/${st.holes}`,
       chips: golfChips(st),
       flash: st.flash === 'golf',
@@ -203,8 +205,8 @@ function computeVm(st: EngineState, cfg: SportCfg, sport: Sport): MatchVM {
       flashB: false,
       scoreA: String(st.strokes),
       scoreB: '',
-      games: toPar(t.topar),
-      sub: `Hole ${st.hole} · Par ${st.par}`,
+      games: toPar(tot.topar),
+      sub: d.sub.golf(st.hole, st.par),
       golf,
     };
   }
@@ -218,22 +220,22 @@ function computeVm(st: EngineState, cfg: SportCfg, sport: Sport): MatchVM {
     scoreA = ptsDisplay(cfg, st.a, st.b);
     scoreB = ptsDisplay(cfg, st.b, st.a);
     games = `${st.gA}–${st.gB}`;
-    sub = `Set ${st.setsA + st.setsB + 1} · Sets ${st.setsA}–${st.setsB}`;
+    sub = d.sub.tennis(st.setsA + st.setsB + 1, st.setsA, st.setsB);
   } else if (cfg.clock) {
     scoreA = String(st.a);
     scoreB = String(st.b);
-    sub = `P${st.period} · ${pad(Math.floor(st.clk / 60))}:${pad(st.clk % 60)}`;
-    games = `P${st.period}`;
+    sub = d.sub.basketball(st.period, `${pad(Math.floor(st.clk / 60))}:${pad(st.clk % 60)}`);
+    games = d.periodShort(st.period);
   } else if (cfg.countUp) {
     scoreA = String(st.a);
     scoreB = String(st.b);
-    sub = `${st.period === 1 ? '1st' : '2nd'} Half · ${st.up}'`;
+    sub = d.sub.football(st.period === 1, st.up);
     games = `${st.gA}–${st.gB}`;
   } else {
     // badminton
     scoreA = String(st.a);
     scoreB = String(st.b);
-    sub = `Game ${st.gA + st.gB + 1}`;
+    sub = d.sub.badminton(st.gA + st.gB + 1);
     games = `${st.gA}–${st.gB}`;
   }
 
@@ -241,9 +243,10 @@ function computeVm(st: EngineState, cfg: SportCfg, sport: Sport): MatchVM {
 }
 
 export function useMatch(sport: Sport): MatchVM {
+  const { t } = useI18n();
   const [vm, setVm] = useState<MatchVM>(() => {
     const cfg = SPORT_DATA[sport];
-    return computeVm(initState(cfg), cfg, sport);
+    return computeVm(initState(cfg), cfg, sport, t);
   });
 
   useEffect(() => {
@@ -251,7 +254,7 @@ export function useMatch(sport: Sport): MatchVM {
     let st = initState(cfg);
     let flashTimer: ReturnType<typeof setTimeout> | undefined;
 
-    const update = () => setVm(computeVm(st, cfg, sport));
+    const update = () => setVm(computeVm(st, cfg, sport, t));
     update();
 
     const score = () => {
@@ -361,7 +364,7 @@ export function useMatch(sport: Sport): MatchVM {
       if (clockTimer) clearInterval(clockTimer);
       if (flashTimer) clearTimeout(flashTimer);
     };
-  }, [sport]);
+  }, [sport, t]);
 
   return vm;
 }

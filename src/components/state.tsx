@@ -4,17 +4,22 @@ import { createContext, useCallback, useContext, useEffect, useState } from 'rea
 
 export type Theme = 'light' | 'dark';
 export type Sport = 'badminton' | 'tennis' | 'basketball' | 'football' | 'golf';
+export type Lang = 'cs' | 'en';
 
 export const SPORTS: Sport[] = ['badminton', 'tennis', 'basketball', 'football', 'golf'];
+export const LANGS: Lang[] = ['cs', 'en'];
 
 export const THEME_STORAGE_KEY = 'scorius-theme';
 export const SPORT_STORAGE_KEY = 'scorius-sport';
+export const LANG_STORAGE_KEY = 'scorius-lang';
 
 type AppState = {
   theme: Theme;
   toggleTheme: () => void;
   sport: Sport;
   setSport: (s: Sport) => void;
+  lang: Lang;
+  setLang: (l: Lang) => void;
 };
 
 const AppContext = createContext<AppState | null>(null);
@@ -28,6 +33,7 @@ const AppContext = createContext<AppState | null>(null);
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light');
   const [sport, setSportState] = useState<Sport>('badminton');
+  const [lang, setLangState] = useState<Lang>('en');
 
   useEffect(() => {
     const root = document.documentElement;
@@ -35,6 +41,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     if (t === 'light' || t === 'dark') setTheme(t);
     const s = root.dataset.sport as Sport | undefined;
     if (s && SPORTS.includes(s)) setSportState(s);
+    const l = root.lang as Lang;
+    if (l === 'cs' || l === 'en') setLangState(l);
   }, []);
 
   const toggleTheme = useCallback(() => {
@@ -56,8 +64,16 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     } catch {}
   }, []);
 
+  const setLang = useCallback((l: Lang) => {
+    setLangState(l);
+    document.documentElement.lang = l;
+    try {
+      localStorage.setItem(LANG_STORAGE_KEY, l);
+    } catch {}
+  }, []);
+
   return (
-    <AppContext.Provider value={{ theme, toggleTheme, sport, setSport }}>
+    <AppContext.Provider value={{ theme, toggleTheme, sport, setSport, lang, setLang }}>
       {children}
     </AppContext.Provider>
   );

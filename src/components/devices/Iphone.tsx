@@ -1,5 +1,8 @@
 import type { CSSProperties } from 'react';
 import type { GolfVM, MatchVM } from '@/hooks/useMatch';
+import type { Dict } from '@/i18n';
+
+type DeviceLoc = Dict['devices'];
 
 function WifiGlyph() {
   return (
@@ -9,11 +12,11 @@ function WifiGlyph() {
   );
 }
 
-function StandardScreen({ vm }: { vm: MatchVM }) {
+function StandardScreen({ vm, loc }: { vm: MatchVM; loc: DeviceLoc }) {
   return (
     <div className="lm">
       <div className="lm-top">
-        <div className="lm-title">Active Match</div>
+        <div className="lm-title">{loc.activeMatch}</div>
         <div className="lm-close">✕</div>
       </div>
       <div className="lm-badge">
@@ -49,25 +52,25 @@ function StandardScreen({ vm }: { vm: MatchVM }) {
   );
 }
 
-function GolfScreen({ golf }: { golf: GolfVM }) {
+function GolfScreen({ golf, loc }: { golf: GolfVM; loc: DeviceLoc }) {
   return (
     <div className="lm-golf">
       <div className="gf-topbar">
         <span className="gf-x">✕</span>
-        <span className="gf-title">Active Match</span>
+        <span className="gf-title">{loc.activeMatch}</span>
         <span className="gf-moon">☾</span>
       </div>
       <div className="gf-head">
         <div className="gf-hole">
-          Hole <b>{golf.hole}</b> / <span>{golf.holes}</span>
+          {loc.hole} <b>{golf.hole}</b> / <span>{golf.holes}</span>
         </div>
         <div className="gf-par">
-          Par <b>{golf.par}</b>
+          {loc.par} <b>{golf.par}</b>
         </div>
       </div>
       <div className="gf-player">
         <div className="gf-pname">
-          Tom<span>You</span>
+          Tom<span>{loc.you}</span>
         </div>
         <div className="gf-step">
           <span className="gf-btn">−</span>
@@ -75,7 +78,7 @@ function GolfScreen({ golf }: { golf: GolfVM }) {
           <span className="gf-btn">+</span>
         </div>
       </div>
-      <div className="gf-tot-label">Totals</div>
+      <div className="gf-tot-label">{loc.totals}</div>
       <div className="gf-tot">
         <div className="gf-tot-name">Tom</div>
         <div className="gf-tot-big">{golf.total}</div>
@@ -83,10 +86,10 @@ function GolfScreen({ golf }: { golf: GolfVM }) {
         <div className="gf-tot-thru">{golf.thru}</div>
       </div>
       <div className="gf-nav">
-        <span className="gf-prev">◀◀ Prev</span>
-        <span className="gf-next">Next hole ▶▶</span>
+        <span className="gf-prev">{loc.prev}</span>
+        <span className="gf-next">{loc.nextHole}</span>
       </div>
-      <div className="gf-holes-label">Holes</div>
+      <div className="gf-holes-label">{loc.holesLabel}</div>
       <div className="gf-chips">
         {golf.chips.map((c) => (
           <div key={c.hole} className={`gchip ${c.cls}${c.current ? ' cur' : ''}`}>
@@ -100,7 +103,7 @@ function GolfScreen({ golf }: { golf: GolfVM }) {
   );
 }
 
-export function Iphone({ vm, style }: { vm: MatchVM; style?: CSSProperties }) {
+export function Iphone({ vm, loc, style }: { vm: MatchVM; loc: DeviceLoc; style?: CSSProperties }) {
   return (
     <div className="iphone" style={style}>
       <div className="island" />
@@ -112,7 +115,7 @@ export function Iphone({ vm, style }: { vm: MatchVM; style?: CSSProperties }) {
             <span className="sb-batt" />
           </span>
         </div>
-        {vm.golf ? <GolfScreen golf={vm.golf} /> : <StandardScreen vm={vm} />}
+        {vm.golf ? <GolfScreen golf={vm.golf} loc={loc} /> : <StandardScreen vm={vm} loc={loc} />}
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ export default function Home() {
       <HowItWorks />
       <PrivacyBand />
       <AccessibilityNote />
-      <CTA title="Ready to play?" subtitle="Start tracking your next match in three taps." />
+      <CTA variant="home" />
     </>
   );
 }

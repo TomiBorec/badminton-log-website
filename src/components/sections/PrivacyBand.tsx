@@ -1,19 +1,21 @@
+'use client';
+
 import Link from 'next/link';
 import { Reveal } from '@/components/Reveal';
+import { useI18n } from '@/i18n';
 
 export function PrivacyBand() {
+  const { t } = useI18n();
+  const p = t.privacyBand;
   return (
     <section className="privacy-band">
       <div className="privacy-inner">
         <Reveal className="section-head">
-          <span className="section-kicker">Privacy first</span>
-          <h2>Your matches are yours.</h2>
-          <p>
-            No accounts. No analytics. No third-party SDKs. Scorius never talks to any server other than Apple&apos;s —
-            the developer cannot see your data.
-          </p>
+          <span className="section-kicker">{p.kicker}</span>
+          <h2>{p.heading}</h2>
+          <p>{p.body}</p>
           <Link className="btn btn-outline btn-sm" href="/privacy" style={{ marginTop: 24 }}>
-            Read the privacy policy →
+            {p.cta}
           </Link>
         </Reveal>
 
@@ -26,8 +28,8 @@ export function PrivacyBand() {
               </svg>
             </div>
             <div>
-              <h4>No accounts, ever</h4>
-              <p>Open the app and play. Nothing to sign up for, nothing to remember.</p>
+              <h4>{p.points[0].title}</h4>
+              <p>{p.points[0].body}</p>
             </div>
           </div>
           <div className="ppoint">
@@ -38,8 +40,8 @@ export function PrivacyBand() {
               </svg>
             </div>
             <div>
-              <h4>Stored in your iCloud</h4>
-              <p>Data lives in your private iCloud key-value store and Apple Health — not on anyone&apos;s server.</p>
+              <h4>{p.points[1].title}</h4>
+              <p>{p.points[1].body}</p>
             </div>
           </div>
           <div className="ppoint">
@@ -50,8 +52,8 @@ export function PrivacyBand() {
               </svg>
             </div>
             <div>
-              <h4>Nothing tracked</h4>
-              <p>Zero telemetry. We don&apos;t know how, when or whether you use the app.</p>
+              <h4>{p.points[2].title}</h4>
+              <p>{p.points[2].body}</p>
             </div>
           </div>
         </Reveal>

@@ -1,15 +1,8 @@
 'use client';
 
-import { SPORTS, type Sport, useAppState } from './state';
+import { SPORTS, useAppState } from './state';
 import { SportIcon } from './icons';
-
-const LABELS: Record<Sport, string> = {
-  badminton: 'Badminton',
-  tennis: 'Tennis',
-  basketball: 'Basketball',
-  football: 'Football',
-  golf: 'Golf',
-};
+import { useI18n } from '@/i18n';
 
 /**
  * Segmented sport switcher. Selecting a sport re-tints every `--accent*` token
@@ -17,8 +10,9 @@ const LABELS: Record<Sport, string> = {
  */
 export function SportSwitch() {
   const { sport, setSport } = useAppState();
+  const { t } = useI18n();
   return (
-    <div className="sport-switch" role="tablist" aria-label="Choose a sport">
+    <div className="sport-switch" role="tablist" aria-label={t.switchStrip.hint}>
       {SPORTS.map((s) => (
         <button
           key={s}
@@ -29,7 +23,7 @@ export function SportSwitch() {
           onClick={() => setSport(s)}
         >
           <SportIcon sport={s} className="si" />
-          {LABELS[s]}
+          {t.sports[s]}
         </button>
       ))}
     </div>

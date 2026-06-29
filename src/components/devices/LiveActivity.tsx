@@ -1,10 +1,13 @@
 import type { MatchVM } from '@/hooks/useMatch';
+import type { Dict } from '@/i18n';
+
+type DeviceLoc = Dict['devices'];
 
 /**
  * Dynamic-Island / Lock-Screen Live Activity mock used on the Features page.
  * Under golf (single-player) the opponent column is hidden.
  */
-export function LiveActivity({ vm }: { vm: MatchVM }) {
+export function LiveActivity({ vm, loc }: { vm: MatchVM; loc: DeviceLoc }) {
   const golf = !!vm.golf;
   return (
     <div style={{ width: '100%', maxWidth: 340 }}>
@@ -64,7 +67,7 @@ export function LiveActivity({ vm }: { vm: MatchVM }) {
         </div>
       </div>
       <div className="mono" style={{ textAlign: 'center', color: 'rgba(255,255,255,.4)', fontSize: 12, marginTop: 16 }}>
-        LIVE ACTIVITY · LOCK SCREEN
+        {loc.liveActivity}
       </div>
     </div>
   );

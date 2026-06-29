@@ -1,5 +1,8 @@
 import type { CSSProperties } from 'react';
 import type { GolfVM, MatchVM } from '@/hooks/useMatch';
+import type { Dict } from '@/i18n';
+
+type DeviceLoc = Dict['devices'];
 
 function StandardScreen({ vm }: { vm: MatchVM }) {
   return (
@@ -26,11 +29,11 @@ function StandardScreen({ vm }: { vm: MatchVM }) {
   );
 }
 
-function GolfScreen({ golf }: { golf: GolfVM }) {
+function GolfScreen({ golf, loc }: { golf: GolfVM; loc: DeviceLoc }) {
   return (
     <div className="w-golf">
       <div className="w-golf-head">
-        Hole <b>{golf.hole}</b>/<span>{golf.holes}</span> · Par <b>{golf.par}</b>
+        {loc.hole} <b>{golf.hole}</b>/<span>{golf.holes}</span> · {loc.par} <b>{golf.par}</b>
       </div>
       <div className={`w-golf-strokes${golf.flash ? ' pop' : ''}`}>{golf.strokes}</div>
       <div className="w-golf-tot">
@@ -40,10 +43,10 @@ function GolfScreen({ golf }: { golf: GolfVM }) {
   );
 }
 
-export function Watch({ vm, style }: { vm: MatchVM; style?: CSSProperties }) {
+export function Watch({ vm, loc, style }: { vm: MatchVM; loc: DeviceLoc; style?: CSSProperties }) {
   return (
     <div className="watch" style={style}>
-      <div className="watch-screen">{vm.golf ? <GolfScreen golf={vm.golf} /> : <StandardScreen vm={vm} />}</div>
+      <div className="watch-screen">{vm.golf ? <GolfScreen golf={vm.golf} loc={loc} /> : <StandardScreen vm={vm} />}</div>
     </div>
   );
 }

@@ -75,9 +75,13 @@ const bootstrap = `(() => {
     var s = localStorage.getItem('scorius-sport');
     var sports = ['badminton','tennis','basketball','football','golf'];
     d.dataset.sport = sports.indexOf(s) !== -1 ? s : 'badminton';
+    var l = localStorage.getItem('scorius-lang');
+    var prefersCs = (navigator.language || '').toLowerCase().indexOf('cs') === 0;
+    d.lang = (l === 'cs' || l === 'en') ? l : (prefersCs ? 'cs' : 'en');
   } catch (e) {
     document.documentElement.dataset.theme = 'light';
     document.documentElement.dataset.sport = 'badminton';
+    document.documentElement.lang = 'en';
   }
 })();`;
 
