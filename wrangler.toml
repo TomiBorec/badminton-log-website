@@ -1,3 +1,2 @@
-name = "scorius"
-pages_build_output_dir = ".open-next"
-compatibility_date = "2026-07-07"
+name = 'badminton-log-website'
+compatibility_date = '2026-07-07'
