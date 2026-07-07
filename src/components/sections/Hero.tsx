@@ -1,8 +1,7 @@
 'use client';
 
-import { APPSTORE_URL } from '@/components/constants';
-import { AppleGlyph } from '@/components/icons';
 import { HeroStage } from '@/components/match/MatchDevices';
+import { AppStoreBadge } from '@/components/AppStoreBadge';
 import { useI18n } from '@/i18n';
 
 export function Hero() {
@@ -17,10 +16,7 @@ export function Hero() {
         <p className="hero-lead">{t.hero.lead}</p>
         <p className="hero-sub">{t.hero.sub}</p>
         <div className="hero-cta">
-          <a className="btn btn-primary" href={APPSTORE_URL} target="_blank" rel="noopener noreferrer">
-            <AppleGlyph width={17} height={17} />
-            {t.hero.download}
-          </a>
+          <AppStoreBadge />
           <a className="btn btn-ghost" href="#sports">
             {t.hero.see}
           </a>
