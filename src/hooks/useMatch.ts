@@ -71,8 +71,14 @@ type SportCfg = {
 const SPORT_DATA: Record<Sport, SportCfg> = {
   badminton: { name: 'Badminton', mode: 'Singles', a: 'Tom', b: 'Bob', gamesLabel: 'Games', cap: 21, hardCap: 30 },
   tennis: { name: 'Tennis', mode: 'Singles', a: 'Tom', b: 'Ana', gamesLabel: 'Games', tennis: true, pts: ['0', '15', '30', '40'] },
+  padel: { name: 'Padel', mode: 'Doubles', a: 'Tom', b: 'Bob', gamesLabel: 'Games', tennis: true, pts: ['0', '15', '30', '40'] },
+  pickleball: { name: 'Pickleball', mode: 'Doubles', a: 'Tom', b: 'Bob', gamesLabel: 'Games', cap: 11, hardCap: 15 },
+  squash: { name: 'Squash', mode: 'Singles', a: 'Tom', b: 'Bob', gamesLabel: 'Games', cap: 11 },
+  tableTennis: { name: 'Table Tennis', mode: 'Singles', a: 'Tom', b: 'Bob', gamesLabel: 'Games', cap: 11 },
+  volleyball: { name: 'Volleyball', mode: '6 v 6', a: 'Home', b: 'Away', gamesLabel: 'Sets', cap: 25 },
   basketball: { name: 'Basketball', mode: '3 v 3', a: 'Reds', b: 'Blues', gamesLabel: 'Period', clock: true, startClock: 600, incs: [2, 2, 2, 3, 1] },
   football: { name: 'Football', mode: '5-a-side', a: 'Home', b: 'Away', gamesLabel: 'Half', countUp: true, halfMin: 45 },
+  floorball: { name: 'Floorball', mode: '5 v 5', a: 'Home', b: 'Away', gamesLabel: 'Period', clock: true, startClock: 1200, incs: [3, 3, 3] },
   golf: { name: 'Golf', mode: 'Stroke play', a: 'Tom', b: 'Sam', gamesLabel: 'To par', golf: true, holes: 18 },
 };
 

@@ -27,7 +27,7 @@ export function Hero() {
         </div>
         <div className="hero-stats">
           <div className="hero-stat">
-            <div className="v">5</div>
+            <div className="v">11</div>
             <div className="l">{t.hero.stats.sports}</div>
           </div>
           <div className="hero-stat">

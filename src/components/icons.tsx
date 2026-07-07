@@ -18,6 +18,43 @@ export function SportIcon({ sport, className }: { sport: Sport; className?: stri
           <path d="M4.5 6.5c4 2 4 9 0 11M19.5 6.5c-4 2-4 9 0 11" />
         </svg>
       );
+    case 'padel':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <rect x="7" y="2" width="10" height="13" rx="2.5" />
+          <path d="M12 15v6" />
+        </svg>
+      );
+    case 'pickleball':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <rect x="8" y="3" width="8" height="11" rx="2" />
+          <circle cx="18.5" cy="17" r="2" />
+        </svg>
+      );
+    case 'squash':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <circle cx="12" cy="7.5" r="4.5" />
+          <path d="M12 12 9 20M12 12l3 8" />
+          <path d="M10 18.5h4" />
+        </svg>
+      );
+    case 'tableTennis':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <ellipse cx="11" cy="7" rx="4.5" ry="5.5" />
+          <path d="M12 12.5v8" />
+          <circle cx="16.5" cy="16" r="1.5" />
+        </svg>
+      );
+    case 'volleyball':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <circle cx="12" cy="12" r="8" />
+          <path d="M6 8c2.5 2 2.5 6 0 8M18 8c-2.5 2-2.5 6 0 8M5 12h14" />
+        </svg>
+      );
     case 'basketball':
       return (
         <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden>
@@ -30,6 +67,14 @@ export function SportIcon({ sport, className }: { sport: Sport; className?: stri
         <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" aria-hidden>
           <circle cx="12" cy="12" r="9" />
           <path d="m12 7.5 3.2 2.3-1.2 3.7h-4L8.8 9.8 12 7.5zM12 3v4.5M19.5 9.5 15.2 9.8M16.8 16.5 14 13.5M7.2 16.5 10 13.5M4.5 9.5l4.3.3" />
+        </svg>
+      );
+    case 'floorball':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <path d="M8 21 13 6" />
+          <path d="M18 4c2 .5 3 2 2 3.5" />
+          <circle cx="9" cy="15" r="1.8" />
         </svg>
       );
     case 'golf':

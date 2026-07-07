@@ -73,16 +73,28 @@
 }
 
 /* ---- Per-sport accent ---- */
-[data-sport="badminton"]  { --accent:#1f9d50; --accent-bright:#2fb457; --accent-soft:rgba(47,180,87,0.12); }
-[data-sport="tennis"]     { --accent:#6f9e00; --accent-bright:#9ad60f; --accent-soft:rgba(154,214,15,0.14); }
-[data-sport="basketball"] { --accent:#e0640f; --accent-bright:#f97316; --accent-soft:rgba(249,115,22,0.12); }
-[data-sport="football"]   { --accent:#2563eb; --accent-bright:#3b82f6; --accent-soft:rgba(59,130,246,0.12); }
-[data-sport="golf"]       { --accent:#0a8f8f; --accent-bright:#10b9b9; --accent-soft:rgba(16,185,185,0.13); }
-:root[data-theme="dark"][data-sport="badminton"],  :root[data-theme="dark"] [data-sport="badminton"]  { --accent:#3ad06a; }
-:root[data-theme="dark"][data-sport="tennis"],      :root[data-theme="dark"] [data-sport="tennis"]     { --accent:#a9e21c; }
-:root[data-theme="dark"][data-sport="basketball"],  :root[data-theme="dark"] [data-sport="basketball"] { --accent:#ff8a3d; }
+[data-sport="badminton"]  { --accent:#e53e30; --accent-bright:#ff5a4a; --accent-soft:rgba(255,90,74,0.12); }
+[data-sport="tennis"]     { --accent:#e07820; --accent-bright:#f09030; --accent-soft:rgba(240,144,48,0.14); }
+[data-sport="padel"]      { --accent:#d49a00; --accent-bright:#edb400; --accent-soft:rgba(237,180,0,0.13); }
+[data-sport="pickleball"] { --accent:#d4aa00; --accent-bright:#edc200; --accent-soft:rgba(237,194,0,0.14); }
+[data-sport="squash"]     { --accent:#7ab800; --accent-bright:#9ad60f; --accent-soft:rgba(154,214,15,0.14); }
+[data-sport="tableTennis"]{ --accent:#1f9d50; --accent-bright:#3ad06a; --accent-soft:rgba(58,208,106,0.12); }
+[data-sport="volleyball"] { --accent:#0a9c9c; --accent-bright:#1fd0d0; --accent-soft:rgba(31,208,208,0.13); }
+[data-sport="basketball"] { --accent:#1299d4; --accent-bright:#38b8f0; --accent-soft:rgba(56,184,240,0.12); }
+[data-sport="football"]   { --accent:#2563eb; --accent-bright:#5b9bff; --accent-soft:rgba(91,155,255,0.12); }
+[data-sport="floorball"]  { --accent:#7a48b8; --accent-bright:#9a6ad8; --accent-soft:rgba(154,106,216,0.12); }
+[data-sport="golf"]       { --accent:#d43d8a; --accent-bright:#ee5dab; --accent-soft:rgba(238,93,171,0.13); }
+:root[data-theme="dark"][data-sport="badminton"],  :root[data-theme="dark"] [data-sport="badminton"]  { --accent:#ff5a4a; }
+:root[data-theme="dark"][data-sport="tennis"],      :root[data-theme="dark"] [data-sport="tennis"]     { --accent:#f09030; }
+:root[data-theme="dark"][data-sport="padel"],       :root[data-theme="dark"] [data-sport="padel"]      { --accent:#edb400; }
+:root[data-theme="dark"][data-sport="pickleball"],  :root[data-theme="dark"] [data-sport="pickleball"] { --accent:#edc200; }
+:root[data-theme="dark"][data-sport="squash"],      :root[data-theme="dark"] [data-sport="squash"]     { --accent:#9ad60f; }
+:root[data-theme="dark"][data-sport="tableTennis"], :root[data-theme="dark"] [data-sport="tableTennis"]{ --accent:#3ad06a; }
+:root[data-theme="dark"][data-sport="volleyball"],  :root[data-theme="dark"] [data-sport="volleyball"] { --accent:#1fd0d0; }
+:root[data-theme="dark"][data-sport="basketball"],  :root[data-theme="dark"] [data-sport="basketball"] { --accent:#38b8f0; }
 :root[data-theme="dark"][data-sport="football"],    :root[data-theme="dark"] [data-sport="football"]   { --accent:#5b9bff; }
-:root[data-theme="dark"][data-sport="golf"],        :root[data-theme="dark"] [data-sport="golf"]       { --accent:#1fd0d0; }
+:root[data-theme="dark"][data-sport="floorball"],   :root[data-theme="dark"] [data-sport="floorball"]  { --accent:#9a6ad8; }
+:root[data-theme="dark"][data-sport="golf"],        :root[data-theme="dark"] [data-sport="golf"]       { --accent:#ee5dab; }
 
 /* ---- Reset ---- */
 * { box-sizing: border-box; }
@@ -588,7 +600,7 @@ img, svg { display: block; }
 .stable .sname .sdot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
 .stable td:nth-child(n+2) { color: var(--muted); }
 .stable tr td:nth-child(1) { color: var(--fg); }
-.dot-bad { background:#2fb457; } .dot-ten { background:#9ad60f; } .dot-bas { background:#f97316; } .dot-foo { background:#3b82f6; } .dot-gol { background:#10b9b9; }
+.dot-bad { background:#ff5a4a; } .dot-ten { background:#f09030; } .dot-pad { background:#edb400; } .dot-pic { background:#edc200; } .dot-squ { background:#9ad60f; } .dot-tab { background:#3ad06a; } .dot-vol { background:#1fd0d0; } .dot-bas { background:#38b8f0; } .dot-foo { background:#5b9bff; } .dot-flo { background:#9a6ad8; } .dot-gol { background:#ee5dab; }
 
 /* ---- Legal / FAQ article ---- */
 .article { max-width: 760px; margin: 0 auto; padding: 24px 28px 90px; }

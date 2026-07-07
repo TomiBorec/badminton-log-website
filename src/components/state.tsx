@@ -3,10 +3,33 @@
 import { createContext, useCallback, useContext, useEffect, useState } from 'react';
 
 export type Theme = 'light' | 'dark';
-export type Sport = 'badminton' | 'tennis' | 'basketball' | 'football' | 'golf';
+export type Sport =
+  | 'badminton'
+  | 'tennis'
+  | 'padel'
+  | 'pickleball'
+  | 'squash'
+  | 'tableTennis'
+  | 'volleyball'
+  | 'basketball'
+  | 'football'
+  | 'floorball'
+  | 'golf';
 export type Lang = 'cs' | 'en';
 
-export const SPORTS: Sport[] = ['badminton', 'tennis', 'basketball', 'football', 'golf'];
+export const SPORTS: Sport[] = [
+  'badminton',
+  'tennis',
+  'padel',
+  'pickleball',
+  'squash',
+  'tableTennis',
+  'volleyball',
+  'basketball',
+  'football',
+  'floorball',
+  'golf',
+];
 export const LANGS: Lang[] = ['cs', 'en'];
 
 export const THEME_STORAGE_KEY = 'scorius-theme';

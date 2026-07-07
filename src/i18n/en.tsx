@@ -33,8 +33,14 @@ export const en = {
   sports: {
     badminton: 'Badminton',
     tennis: 'Tennis',
+    padel: 'Padel',
+    pickleball: 'Pickleball',
+    squash: 'Squash',
+    tableTennis: 'Table Tennis',
+    volleyball: 'Volleyball',
     basketball: 'Basketball',
     football: 'Football',
+    floorball: 'Floorball',
     golf: 'Golf',
   },
 
@@ -50,10 +56,10 @@ export const en = {
     ),
     lead: (
       <>
-        Badminton, tennis, basketball, football, golf. <span className="muted">One app. One tap.</span>
+        Badminton, tennis, padel, squash, volleyball… <span className="muted">Eleven sports. One app. One tap.</span>
       </>
     ),
-    sub: 'Scorius keeps score for you on Apple Watch across five sports — with heart rate, calories and per-sport rules built in. iPhone and iPad mirror every point live, and everything syncs over iCloud.',
+    sub: 'Scorius keeps score for you on Apple Watch across eleven sports — with heart rate, calories and per-sport rules built in. iPhone and iPad mirror every point live, and everything syncs over iCloud.',
     download: 'Download on App Store',
     see: 'See it in action →',
     stats: { sports: 'Sports', sync: 'Live sync', accounts: 'Accounts' },
@@ -74,8 +80,8 @@ export const en = {
     },
     cards: [
       {
-        title: 'Five sports, one app',
-        body: 'Badminton, tennis, basketball, football and golf — each with its own rules engine, scorer and stats. Switch sport, the app re-tunes itself.',
+        title: 'Eleven sports, one app',
+        body: 'Badminton, tennis, padel, squash, table tennis, volleyball, basketball, football, floorball and golf — each with its own rules engine, scorer and stats. Switch sport, the app re-tunes itself.',
       },
       {
         title: 'iCloud sync',
@@ -102,7 +108,7 @@ export const en = {
     steps: [
       {
         title: 'Pick a sport',
-        body: 'Choose badminton, tennis, basketball, football or golf. Scorius loads the right rules — games, sets, periods, holes.',
+        body: 'Choose from eleven sports — from badminton to golf. Scorius loads the right rules — games, sets, periods, holes.',
       },
       {
         title: 'Tap to score',
@@ -182,23 +188,41 @@ export const en = {
     modes: {
       badminton: 'Singles',
       tennis: 'Singles',
+      padel: 'Doubles',
+      pickleball: 'Doubles',
+      squash: 'Singles',
+      tableTennis: 'Singles',
+      volleyball: '6 v 6',
       basketball: '3 v 3',
       football: '5-a-side',
+      floorball: '5 v 5',
       golf: 'Stroke play',
     },
     gamesLabels: {
       badminton: 'Games',
       tennis: 'Games',
+      padel: 'Games',
+      pickleball: 'Games',
+      squash: 'Games',
+      tableTennis: 'Games',
+      volleyball: 'Sets',
       basketball: 'Period',
       football: 'Half',
+      floorball: 'Period',
       golf: 'To par',
     },
     periodShort: (p: number) => `P${p}`,
     sub: {
       badminton: (game: number) => `Game ${game}`,
       tennis: (set: number, sa: number, sb: number) => `Set ${set} · Sets ${sa}–${sb}`,
+      padel: (game: number) => `Game ${game}`,
+      pickleball: (game: number) => `Game ${game}`,
+      squash: (game: number) => `Game ${game}`,
+      tableTennis: (game: number) => `Game ${game}`,
+      volleyball: (set: number, sa: number, sb: number) => `Set ${set} · Sets ${sa}–${sb}`,
       basketball: (period: number, clock: string) => `P${period} · ${clock}`,
       football: (firstHalf: boolean, minute: number) => `${firstHalf ? '1st' : '2nd'} Half · ${minute}'`,
+      floorball: (period: number, clock: string) => `P${period} · ${clock}`,
       golf: (hole: number, par: number) => `Hole ${hole} · Par ${par}`,
     },
   },
@@ -223,7 +247,7 @@ export const en = {
       },
       {
         q: 'Which sports can I track?',
-        a: 'Badminton, tennis, basketball, football and golf — each with its own proper scoring rules, which you can configure per sport.',
+        a: 'Badminton, tennis, padel, pickleball, squash, table tennis, volleyball, basketball, football, floorball and golf — each with its own proper scoring rules, which you can configure per sport.',
       },
       {
         q: 'Does it work offline?',
@@ -279,7 +303,7 @@ export const en = {
           every sport you play.
         </>
       ),
-      lead: 'Five sports, three devices, one consistent app. Pick a sport below — the previews update to match.',
+      lead: 'Eleven sports, three devices, one consistent app. Pick a sport below — the previews update to match.',
       watch: {
         kicker: 'Apple Watch',
         title: 'Score from your wrist.',
@@ -291,7 +315,7 @@ export const en = {
         ],
       },
       fiveSports: {
-        kicker: 'Five sports',
+        kicker: 'Eleven sports',
         title: 'One app that speaks every game.',
         body: 'Each sport has its own scoring engine — not a generic counter with labels swapped. Rally points, 15/30/40, period clocks, goals or strokes are all modelled properly, with configurable rules per sport.',
       },
@@ -311,6 +335,36 @@ export const en = {
             setup: 'Singles / Doubles, up to 4 players',
           },
           {
+            sport: 'Padel',
+            dot: 'dot-pad',
+            scoring: '0/15/30/40/AD, sets, tiebreak, optional No-Ad',
+            setup: 'Doubles, up to 4 players',
+          },
+          {
+            sport: 'Pickleball',
+            dot: 'dot-pic',
+            scoring: 'Rally to 11, win by 2, side-out scoring',
+            setup: 'Singles / Doubles, up to 4 players',
+          },
+          {
+            sport: 'Squash',
+            dot: 'dot-squ',
+            scoring: 'PAR to 11, best of 5 games',
+            setup: 'Singles, 2 players',
+          },
+          {
+            sport: 'Table Tennis',
+            dot: 'dot-tab',
+            scoring: 'Games to 11, best of 5 or 7 sets',
+            setup: 'Singles / Doubles, up to 4 players',
+          },
+          {
+            sport: 'Volleyball',
+            dot: 'dot-vol',
+            scoring: 'Rally to 25, sets to win match, 5th set to 15',
+            setup: 'Rotations, up to 12 players per team',
+          },
+          {
             sport: 'Basketball',
             dot: 'dot-bas',
             scoring: '+1 / +2 / +3 per shot, periods with countdown clock + OT',
@@ -321,6 +375,12 @@ export const en = {
             dot: 'dot-foo',
             scoring: '+1 goal per shot, halves with countdown clock + ET',
             setup: 'Team size 1–22 (starters + subs)',
+          },
+          {
+            sport: 'Floorball',
+            dot: 'dot-flo',
+            scoring: '+1 goal per shot, 3 periods with countdown clock + OT',
+            setup: 'Team size 1–20 (starters + subs)',
           },
           {
             sport: 'Golf',

@@ -4,7 +4,7 @@ import { FeaturesContent } from './FeaturesContent';
 export const metadata: Metadata = {
   title: 'Features — Scorius',
   description:
-    'Everything Scorius does: score from your wrist, five sports, Live Activities, stats, tournaments, HealthKit and iCloud sync.',
+    'Everything Scorius does: score from your wrist, eleven sports, Live Activities, stats, tournaments, HealthKit and iCloud sync.',
 };
 
 export default function FeaturesPage() {

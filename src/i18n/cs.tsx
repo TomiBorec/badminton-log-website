@@ -29,8 +29,14 @@ export const cs: Dict = {
   sports: {
     badminton: 'Badminton',
     tennis: 'Tenis',
+    padel: 'Padel',
+    pickleball: 'Pickleball',
+    squash: 'Squash',
+    tableTennis: 'Stolní tenis',
+    volleyball: 'Volejbal',
     basketball: 'Basketbal',
     football: 'Fotbal',
+    floorball: 'Florbal',
     golf: 'Golf',
   },
 
@@ -46,10 +52,10 @@ export const cs: Dict = {
     ),
     lead: (
       <>
-        Badminton, tenis, basketbal, fotbal, golf. <span className="muted">Jedna aplikace. Jedno ťuknutí.</span>
+        Badminton, tenis, padel, squash, volejbal… <span className="muted">Jedenáct sportů. Jedna aplikace. Jedno ťuknutí.</span>
       </>
     ),
-    sub: 'Scorius počítá skóre za tebe na Apple Watch v pěti sportech — s tepovou frekvencí, kaloriemi a pravidly pro každý sport. iPhone a iPad živě zrcadlí každý bod a všechno se synchronizuje přes iCloud.',
+    sub: 'Scorius počítá skóre za tebe na Apple Watch v jedenácti sportech — s tepovou frekvencí, kaloriemi a pravidly pro každý sport. iPhone a iPad živě zrcadlí každý bod a všechno se synchronizuje přes iCloud.',
     download: 'Stáhnout z App Store',
     see: 'Podívej se na to v akci →',
     stats: { sports: 'Sportů', sync: 'Živá synchronizace', accounts: 'Účtů' },
@@ -70,8 +76,8 @@ export const cs: Dict = {
     },
     cards: [
       {
-        title: 'Pět sportů, jedna aplikace',
-        body: 'Badminton, tenis, basketbal, fotbal a golf — každý má vlastní pravidla, počítadlo i statistiky. Přepneš sport a aplikace se sama přeladí.',
+        title: 'Jedenáct sportů, jedna aplikace',
+        body: 'Badminton, tenis, padel, squash, stolní tenis, volejbal, basketbal, fotbal, florbal i golf — každý má vlastní pravidla, počítadlo i statistiky. Přepneš sport a aplikace se sama přeladí.',
       },
       {
         title: 'Synchronizace přes iCloud',
@@ -98,7 +104,7 @@ export const cs: Dict = {
     steps: [
       {
         title: 'Vyber sport',
-        body: 'Zvol badminton, tenis, basketbal, fotbal nebo golf. Scorius načte správná pravidla — sety, gemy, čtvrtiny, jamky.',
+        body: 'Zvol jeden z jedenácti sportů — od badmintonu po golf. Scorius načte správná pravidla — sety, gemy, čtvrtiny, jamky.',
       },
       {
         title: 'Ťukáním počítej',
@@ -178,23 +184,41 @@ export const cs: Dict = {
     modes: {
       badminton: 'Dvouhra',
       tennis: 'Dvouhra',
+      padel: 'Čtyřhra',
+      pickleball: 'Čtyřhra',
+      squash: 'Dvouhra',
+      tableTennis: 'Dvouhra',
+      volleyball: '6 na 6',
       basketball: '3 na 3',
       football: '5 na 5',
+      floorball: '5 na 5',
       golf: 'Na rány',
     },
     gamesLabels: {
       badminton: 'Sety',
       tennis: 'Gemy',
+      padel: 'Gemy',
+      pickleball: 'Gemy',
+      squash: 'Gemy',
+      tableTennis: 'Sety',
+      volleyball: 'Sety',
       basketball: 'Čtvrtina',
       football: 'Poločas',
+      floorball: 'Třetina',
       golf: 'Na par',
     },
     periodShort: (p) => `Č${p}`,
     sub: {
       badminton: (game) => `Set ${game}`,
       tennis: (set, sa, sb) => `Sada ${set} · Sady ${sa}–${sb}`,
+      padel: (game) => `Gem ${game}`,
+      pickleball: (game) => `Gem ${game}`,
+      squash: (game) => `Gem ${game}`,
+      tableTennis: (set) => `Sada ${set}`,
+      volleyball: (set, sa, sb) => `Sada ${set} · Sady ${sa}–${sb}`,
       basketball: (period, clock) => `Č${period} · ${clock}`,
       football: (firstHalf, minute) => `${firstHalf ? '1.' : '2.'} poločas · ${minute}'`,
+      floorball: (period, clock) => `T${period} · ${clock}`,
       golf: (hole, par) => `Jamka ${hole} · Par ${par}`,
     },
   },
@@ -219,7 +243,7 @@ export const cs: Dict = {
       },
       {
         q: 'Které sporty můžu sledovat?',
-        a: 'Badminton, tenis, basketbal, fotbal a golf — každý s vlastními správnými pravidly počítání, která si můžeš pro každý sport nastavit.',
+        a: 'Badminton, tenis, padel, pickleball, squash, stolní tenis, volejbal, basketbal, fotbal, florbal a golf — každý s vlastními správnými pravidly počítání, která si můžeš pro každý sport nastavit.',
       },
       {
         q: 'Funguje to offline?',
@@ -275,7 +299,7 @@ export const cs: Dict = {
           každý sport, který hraješ.
         </>
       ),
-      lead: 'Pět sportů, tři zařízení, jedna konzistentní aplikace. Vyber sport níže — náhledy se mu přizpůsobí.',
+      lead: 'Jedenáct sportů, tři zařízení, jedna konzistentní aplikace. Vyber sport níže — náhledy se mu přizpůsobí.',
       watch: {
         kicker: 'Apple Watch',
         title: 'Skóruj ze zápěstí.',
@@ -287,7 +311,7 @@ export const cs: Dict = {
         ],
       },
       fiveSports: {
-        kicker: 'Pět sportů',
+        kicker: 'Jedenáct sportů',
         title: 'Jedna aplikace, která rozumí každé hře.',
         body: 'Každý sport má vlastní engine pro počítání skóre — ne jen obecné počítadlo s vyměněnými popisky. Body z výměn, 15/30/40, hrací časy, góly i rány jsou správně namodelované, s nastavitelnými pravidly pro každý sport.',
       },
@@ -307,6 +331,36 @@ export const cs: Dict = {
             setup: 'Dvouhra / čtyřhra, až 4 hráči',
           },
           {
+            sport: 'Padel',
+            dot: 'dot-pad',
+            scoring: '0/15/30/40/AD, sady, tiebreak, volitelný No-Ad',
+            setup: 'Čtyřhra, až 4 hráči',
+          },
+          {
+            sport: 'Pickleball',
+            dot: 'dot-pic',
+            scoring: 'Na 11, výhra o 2, podání se stranou',
+            setup: 'Dvouhra / čtyřhra, až 4 hráči',
+          },
+          {
+            sport: 'Squash',
+            dot: 'dot-squ',
+            scoring: 'PAR na 11, nejlepší z 5 gamů',
+            setup: 'Dvouhra, 2 hráči',
+          },
+          {
+            sport: 'Stolní tenis',
+            dot: 'dot-tab',
+            scoring: 'Hra na 11, nejlepší z 5 nebo 7 setů',
+            setup: 'Dvouhra / čtyřhra, až 4 hráči',
+          },
+          {
+            sport: 'Volejbal',
+            dot: 'dot-vol',
+            scoring: 'Na 25, sady na vítězství, 5. sada do 15',
+            setup: 'Rotace, až 12 hráčů',
+          },
+          {
             sport: 'Basketbal',
             dot: 'dot-bas',
             scoring: '+1 / +2 / +3 za koš, čtvrtiny s odpočtem + prodloužení',
@@ -317,6 +371,12 @@ export const cs: Dict = {
             dot: 'dot-foo',
             scoring: '+1 gól za střelu, poločasy s odpočtem + prodloužení',
             setup: 'Velikost týmu 1–22 (základ + střídající)',
+          },
+          {
+            sport: 'Florbal',
+            dot: 'dot-flo',
+            scoring: '+1 gól, třetiny s odpočtem + prodloužení',
+            setup: 'Velikost týmu 1–20 (základ + střídající)',
           },
           {
             sport: 'Golf',
