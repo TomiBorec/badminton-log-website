@@ -1,8 +1,5 @@
 # Badminton Log → Scorius
 
-**Badminton Log** se přejmenoval na **Scorius**.
+Badminton Log se přejmenoval na **Scorius** a přesunul na [scorius.app](https://scorius.app).
 
-Starý web na `badmintonlog.com` teď přesměrovává na [scorius.app](https://scorius.app).
-
-Zdrojový kód: [github.com/TomiBorec/scorius-website](https://github.com/TomiBorec/scorius-website)
-
+Staré domény `badmintonlog.com` a `www.badmintonlog.com` přesměrovávají na `scorius.app`.
